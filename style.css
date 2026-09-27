@@ -1101,7 +1101,7 @@ h1 {
     top: 0;
     z-index: 1000;
     width: 100%;
-    min-height: 82px;
+    height: 82px;
     display: flex;
     align-items: center;
     justify-content: space-between;
