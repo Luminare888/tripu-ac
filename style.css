@@ -1,0 +1,1470 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+@font-face {
+    font-family: "AssassinFont";
+    src: url("Assassin$.ttf") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ==================================================
+   CONTENEDOR PRINCIPAL — 900px
+   ================================================== */
+
+.hero {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 1920 / 854;
+    margin: 0 auto;
+
+    background-image: url("https://i.imgur.com/5gEzWsX.jpeg");
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+}
+
+/* ==================================================
+   CONTENIDO IZQUIERDO
+   ================================================== */
+
+.hero-content {
+    position: absolute;
+    left: 4%;
+    top: 5.5%;
+    width: 350px;
+    color: #f1e5c4;
+}
+
+/* ==================================================
+   SÍMBOLO SUPERIOR
+   ================================================== */
+
+.logo {
+    position: relative;
+    width: 100px;
+    height: 70px;
+    margin-bottom: 5px;
+}
+
+.logo-symbol {
+    position: absolute;
+    left: 0;
+    top: -7px;
+    background: url(https://i.imgur.com/41Vno9X.png);
+    background-size: cover;
+    opacity: 0.9;
+    width: 57px;
+    height: 70px;
+
+    transform: rotate(-8deg);
+}
+
+/* ==================================================
+   LÍNEA DECORATIVA
+   ================================================== */
+
+.line {
+    position: absolute;
+    left: 100px;
+    top: 50px;
+
+    width: 210px;
+    height: 1px;
+
+    background: #c5a55c;
+    opacity: 0.85;
+}
+
+.line::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: -4px;
+
+    width: 45px;
+    height: 9px;
+
+    border-top: 1px solid #c5a55c;
+}
+
+/* ==================================================
+   TÍTULO
+   ================================================== */
+
+h1 {
+    margin-top: 0;
+
+    font-family: 'AssassinFont';
+    font-size: 35px;
+    line-height: 1.12;
+    font-weight: 200;
+    text-transform: uppercase;
+
+    letter-spacing: 0.4px;
+
+    color: #e7d49f;
+
+    text-shadow:
+        0 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+/* ==================================================
+   DESCRIPCIÓN
+   ================================================== */
+
+.description {
+    margin-top: 7px;
+    color: #dedede;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.description p {
+    margin-bottom: 9px;
+}
+
+/* ==================================================
+   DATOS DEL PERSONAJE
+   ================================================== */
+
+.character-data {
+    width: 330px;
+    margin-top: 8px;
+}
+
+.data-row {
+    display: flex;
+    flex-direction: column;
+
+    padding: 7px 0;
+}
+
+/* Etiquetas */
+
+.data-label {
+    color: #e7d49f;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 10px;
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 2px;
+}
+
+/* Información */
+
+.data-value {
+    color: #aaa9a3;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+
+    letter-spacing: 0.3px;
+}
+
+/* Pequeño detalle decorativo */
+
+.data-row::before {
+    content: "◆";
+
+    position: absolute;
+
+    margin-left: -12px;
+    margin-top: 2px;
+
+    font-size: 5px;
+
+    color: #b89b58;
+}
+
+/* ==================================================
+   BOTÓN
+   ================================================== */
+
+.register {
+    position: relative;
+
+    display: flex;
+    float: right;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    margin-top: 340px;
+
+    width: 210px;
+    height: 36px;
+
+    border: 1px solid #c5a55c;
+    border-radius: 20px;
+
+    background: #331816;
+    color: #e7d49f;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 0.2px;
+
+    cursor: pointer;
+
+    box-shadow:
+        inset 0 0 0 1px rgba(0, 0, 0, 0.12),
+        0 2px 6px rgba(0, 0, 0, 0.35);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.register::before,
+.register::after {
+    content: "";
+
+    position: absolute;
+
+    width: 8px;
+    height: 8px;
+
+    border: 1px solid #c5a55c;
+
+    transform: rotate(45deg);
+}
+
+.register::before {
+    left: -6px;
+}
+
+.register::after {
+    right: -6px;
+}
+
+.register:hover {
+    background: #281415;
+    transform: translateY(-2px);
+}
+
+.register span:first-child {
+    margin-right: 12px;
+}
+
+.button-arrow {
+    font-size: 14px;
+    color: #d9c48f;
+}
+
+/* ==================================================
+   RESPONSIVE
+   ================================================== */
+
+@media (max-width: 700px) {
+
+    .hero {
+        aspect-ratio: auto;
+        min-height: 550px;
+
+        background-position: 62% center;
+    }
+
+    .hero-content {
+        left: 25px;
+        top: 30px;
+
+        width: calc(100% - 50px);
+    }
+
+    .logo {
+        transform: scale(0.7);
+        transform-origin: left top;
+    }
+
+    .line {
+        display: none;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
+
+    .description p {
+        margin-bottom: 8px;
+    }
+
+    .register {
+        width: 210px;
+        height: 40px;
+
+        margin-top: 16px;
+
+        font-size: 11px;
+    }
+}
+
+/* ==================================================
+   CONTENIDO DEBAJO DEL CUADRO PRINCIPAL
+   ================================================== */
+
+.below-hero {
+    width: 100%;
+    max-width: 900px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    background: #0b0b09;
+
+    overflow: hidden;
+}
+
+
+/* ==================================================
+   GALERÍA
+   ================================================== */
+
+.gallery-section {
+    width: 100%;
+
+    background: #0c0c09;
+}
+
+.gallery {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        0.8fr 1.1fr 1.1fr 1.1fr;
+
+    grid-template-rows:
+        85px 85px;
+
+    gap: 1px;
+
+    background: #050505;
+}
+
+.gallery-item {
+    position: relative;
+
+    overflow: hidden;
+
+    background: #151515;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.06);
+
+    filter: brightness(1.15);
+}
+
+
+/* Posiciones */
+
+.gallery-item:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.gallery-item:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.gallery-item:nth-child(3) {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.gallery-item:nth-child(4) {
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.gallery-item:nth-child(5) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.gallery-wide {
+    grid-column: 2 / 4;
+    grid-row: 2;
+}
+
+.gallery-item:nth-child(7) {
+    grid-column: 4;
+    grid-row: 2;
+}
+
+
+/* ==================================================
+   NEWS
+   ================================================== */
+
+.news-section {
+    width: 100%;
+
+    background: #0c0c09;
+
+    overflow: hidden;
+}
+
+
+/* ==================================================
+   IMAGEN DE NEWS
+   ================================================== */
+
+.news-image {
+    position: relative;
+
+    width: 100%;
+    height: 145px;
+
+    overflow: hidden;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.news-image-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 0%,
+            rgba(5, 5, 4, 0.1) 30%,
+            #0c0c09 100%
+        );
+}
+
+
+/* ==================================================
+   CONTENIDO NEWS
+   ================================================== */
+
+.news-content {
+    padding: 0 18px 20px;
+    overflow: auto;
+    height: 280px;
+}
+
+
+/* ==================================================
+   CABECERA
+   ================================================== */
+
+.news-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 16px;
+}
+
+.news-header h2 {
+    color: #d1b879;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 29px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* ==================================================
+   BOTÓN MORE
+   ================================================== */
+
+.more-button {
+    width: 70px;
+    height: 26px;
+
+    border: 1px solid #b79b5b;
+
+    border-radius: 16px;
+
+    background: #302c20;
+
+    color: #d8bd7e;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 9px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.more-button:hover {
+    background: #453e2b;
+}
+
+
+/* ==================================================
+   NOTICIAS
+   ================================================== */
+
+.news-item {
+    position: relative;
+
+    padding-bottom: 12px;
+
+    margin-bottom: 12px;
+
+    border-bottom:
+        1px solid #555249;
+}
+
+
+/* Pequeña decoración sobre la línea */
+
+.news-item::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -2px;
+
+    width: 30px;
+    height: 3px;
+
+    background: #aaa28d;
+
+    clip-path: polygon(
+        0 0,
+        70% 0,
+        100% 50%,
+        70% 100%,
+        0 100%,
+        25% 50%
+    );
+}
+
+
+/* ==================================================
+   TÍTULO + FECHA
+   ================================================== */
+
+.news-title {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 8px;
+}
+
+.news-title h3 {
+    flex: 1;
+
+    color: #e8e8e5;
+
+    font-size: 14px;
+
+    line-height: 1.08;
+
+    font-weight: 700;
+}
+
+.news-title span {
+    flex-shrink: 0;
+
+    color: #a6a39a;
+
+    font-family: Georgia, serif;
+
+    font-size: 9px;
+
+    padding-top: 2px;
+}
+
+
+/* ==================================================
+   DESCRIPCIÓN
+   ================================================== */
+
+.news-item p {
+    margin-top: 8px;
+
+    color: #898781;
+
+    font-size: 12px;
+
+    line-height: 1.45;
+}
+
+
+/* ==================================================
+   RESPONSIVE
+   ================================================== */
+
+@media (max-width: 700px) {
+
+    .below-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-rows:
+            90px 90px;
+    }
+
+    .news-section {
+        border-top: 2px solid #171713;
+    }
+
+    .news-image {
+        height: 180px;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .gallery {
+        grid-template-columns:
+            1fr 1fr;
+
+        grid-template-rows:
+            80px 80px 80px;
+    }
+
+    .gallery-item:nth-child(n) {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .gallery-wide {
+        grid-column: span 2 !important;
+    }
+
+    .news-content {
+        padding: 0 20px 20px;
+    }
+}
+
+/* ==================================================
+   TRASFONDO
+   ================================================== */
+
+.background-content {
+    position: relative;
+
+    width: 100%;
+
+    height: 275px;
+    overflow: auto;
+
+    padding: 22px 20px 18px;
+
+    background: #0c0c09;
+
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding-bottom: 0px;
+}
+
+
+/* Decoración sutil de fondo */
+
+.background-content::after {
+    content: "";
+
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    right: -100px;
+    top: 0px;
+
+    border: 1px solid rgba(184, 155, 88, 0.12);
+
+    transform: rotate(45deg);
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   TÍTULO TRASFONDO
+   ================================================== */
+
+.background-header {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 8px;
+}
+
+.background-header h2 {
+    color: #d1b879;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 27px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* ==================================================
+   LÍNEA DECORATIVA
+   ================================================== */
+
+.background-line {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+    height: 1px;
+
+    margin-bottom: 15px;
+
+    background: #555249;
+}
+
+.background-line::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: -1px;
+
+    width: 35px;
+    height: 3px;
+
+    background: #b89b58;
+
+    clip-path: polygon(
+        0 0,
+        75% 0,
+        100% 50%,
+        75% 100%,
+        0 100%,
+        25% 50%
+    );
+}
+
+
+/* ==================================================
+   TEXTO
+   ================================================== */
+
+.background-content p {
+    position: relative;
+
+    z-index: 2;
+
+    color: #aaa9a3;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    margin-bottom: 9px;
+    overflow: auto;
+}
+
+
+/* ==================================================
+   FRASE DESTACADA
+   ================================================== */
+
+.background-content .background-quote {
+    margin-top: 13px;
+
+    padding-left: 10px;
+
+    border-left: 2px solid #b89b58;
+
+    color: #d1b879;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 10px;
+
+    font-style: italic;
+
+    line-height: 1.4;
+}
+
+
+/* ==================================================
+   GALERÍA
+   ================================================== */
+
+.gallery {
+    width: 100%;
+
+    display: flex;
+
+    gap: 1px;
+
+    background: #050505;
+}
+
+
+.gallery-item {
+    position: relative;
+
+    overflow: hidden;
+
+    background: #151515;
+}
+
+
+.gallery-item img {
+    width: 150px;
+    height: 150px;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+
+.gallery-item:hover img {
+    transform: scale(1.06);
+
+    filter: brightness(1.15);
+}
+
+
+/* ==================================================
+   POSICIONES GALERÍA
+   ================================================== */
+
+.gallery-item:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.gallery-item:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.gallery-item:nth-child(3) {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.gallery-item:nth-child(4) {
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.gallery-item:nth-child(5) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.gallery-wide {
+    grid-column: 2 / 4;
+    grid-row: 2;
+}
+
+.gallery-item:nth-child(7) {
+    grid-column: 4;
+    grid-row: 2;
+}
+
+
+/* ==================================================
+   RESPONSIVE
+   ================================================== */
+
+@media (max-width: 700px) {
+
+    .below-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .background-content {
+        min-height: 300px;
+
+        padding: 25px 25px 20px;
+    }
+
+    .gallery {
+        grid-template-rows:
+            90px 90px;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .background-content {
+        min-height: 330px;
+
+        padding: 22px 20px;
+    }
+
+    .background-header h2 {
+        font-size: 24px;
+    }
+
+    .background-content p {
+        font-size: 10px;
+    }
+
+    .gallery {
+        grid-template-columns:
+            1fr 1fr;
+
+        grid-template-rows:
+            80px 80px 80px;
+    }
+
+    .gallery-item:nth-child(n) {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .gallery-wide {
+        grid-column: span 2 !important;
+    }
+}
+
+/* ==================================================
+   SCROLLBAR NEWS — ESTILO RENACENTISTA
+   ================================================== */
+
+.news-section {
+    overflow-y: auto;
+
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #817354 #0c0c09;
+}
+
+
+/* Chrome / Edge / Safari */
+
+.news-section::-webkit-scrollbar {
+    width: 2px;
+}
+
+.news-section::-webkit-scrollbar-track {
+    background: #0c0c09;
+}
+
+.news-section::-webkit-scrollbar-thumb {
+    background: #817354;
+    border-radius: 0;
+    
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    
+    background-clip: padding-box;
+}
+
+.news-section::-webkit-scrollbar-thumb:hover {
+    background: #b89b58;
+    background-clip: padding-box;
+}
+
+/* ==================================================
+   SCROLLBAR TRASFONDO — ESTILO RENACENTISTA
+   ================================================== */
+
+.background-content {
+    overflow-y: auto;
+
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #817354 #0c0c09;
+}
+
+
+/* Chrome / Edge / Safari */
+
+.background-content::-webkit-scrollbar {
+    width: 2px;
+}
+
+.background-content::-webkit-scrollbar-track {
+    background: #0c0c09;
+}
+
+.background-content::-webkit-scrollbar-thumb {
+    background: #817354;
+    border-radius: 0;
+
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+
+    background-clip: padding-box;
+}
+
+.background-content::-webkit-scrollbar-thumb:hover {
+    background: #b89b58;
+    background-clip: padding-box;
+}
+
+/* ==================================================
+   MENÚ SUPERIOR — ESTILO ASSASSIN'S CREED JADE
+   ================================================== */
+
+.top-menu {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 0 26px 0 42px;
+    background:
+        linear-gradient(90deg, #171713 0%, #11110f 55%, #181813 100%);
+    border-bottom: 1px solid #28271e;
+}
+
+.menu-logo {
+    min-width: 190px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #e3cf96;
+    text-decoration: none;
+}
+
+.menu-logo-mark {
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    color: #c5a55c;
+    font-family: Georgia, serif;
+    font-size: 42px;
+    line-height: 1;
+    margin-top: -25px;
+    margin-right: 20px;
+}
+
+.menu-logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: .9;
+    letter-spacing: 1px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 12px;
+}
+
+.menu-logo-text em {
+    margin-top: 4px;
+    color: #698b50;
+    font-style: normal;
+    letter-spacing: 5px;
+    font-size: 11px;
+}
+
+.menu-links {
+    height: 82px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 8px;
+}
+
+.menu-links a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 17px;
+    color: #bda26a;
+    text-decoration: none;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    letter-spacing: .5px;
+    transition: .2s ease;
+}
+
+.menu-links a:hover,
+.menu-links a.active {
+    color: #ead9a5;
+    background: #331816;
+}
+
+.menu-links a.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    transform: translateX(-50%);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 0;
+    border-top: 7px solid #c5a55c;
+}
+
+.menu-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.crew-button,
+.edit-button {
+    min-height: 34px;
+    padding: 0 11px;
+    border: 1px solid #8e7745;
+    background: #202018;
+    color: #d8c185;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 9px;
+    letter-spacing: .45px;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.crew-button:hover,
+.edit-button:hover {
+    background: #3a3727;
+    color: #f0dda6;
+    transform: translateY(-1px);
+}
+
+.crew-button .arrow {
+    font-size: 18px;
+    vertical-align: -2px;
+    color: #b89b58;
+}
+
+.edit-button {
+    border-radius: 18px;
+    padding: 0 14px;
+    background: #637e4e;
+    color: #f0e5bd;
+    border-color: #c5a55c;
+}
+
+/* El contenido original conserva su ancho de 900px. */
+.page {
+    position: relative;
+}
+
+@media (max-width: 1050px) {
+    .top-menu {
+        padding: 0 16px;
+        flex-wrap: wrap;
+        min-height: auto;
+    }
+
+    .menu-logo {
+        min-width: auto;
+    }
+
+    .menu-links {
+        order: 3;
+        width: 100%;
+        height: 48px;
+        overflow-x: auto;
+    }
+
+    .menu-links a {
+        font-size: 11px;
+        padding: 0 12px;
+        white-space: nowrap;
+    }
+
+    .menu-actions {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .top-menu {
+        gap: 8px;
+        padding: 10px 12px;
+    }
+
+    .menu-logo-text {
+        display: none;
+    }
+
+    .menu-logo-mark {
+        width: 34px;
+        height: 40px;
+        font-size: 34px;
+    }
+
+    .menu-actions {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .crew-button,
+    .edit-button {
+        font-size: 8px;
+        padding: 0 8px;
+    }
+}
+
+/* ==================================================
+   MENÚ + PESTAÑAS DE TRIPULANTES — MISMO ANCHO QUE EL CÓDIGO
+   ================================================== */
+.top-menu {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    max-width: 900px;
+    min-height: 82px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 0 14px 0 18px;
+    background: linear-gradient(90deg, #171713 0%, #11110f 55%, #181813 100%);
+    border: 1px solid #28271e;
+    border-top: 0;
+}
+
+.character-tabs {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    min-height: 43px;
+    display: flex;
+    align-items: stretch;
+    background: #0d0d0b;
+    border-left: 1px solid #28271e;
+    border-right: 1px solid #28271e;
+    border-bottom: 1px solid #28271e;
+}
+
+.character-tab {
+    position: relative;
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 43px;
+    border: 0;
+    border-right: 1px solid #302d22;
+    background: #151511;
+    color: #a89465;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 9px;
+    letter-spacing: .35px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+    cursor: default;
+    user-select: none;
+    transition: .2s ease;
+}
+
+.character-tab:hover {
+    background: #151511;
+    color: #a89465;
+}
+
+.character-tab.active {
+    background: #331816;
+    color: #eedca7;
+    box-shadow: inset 0 -3px 0 #c5a55c;
+}
+
+.character-tab.active::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 5px solid #c5a55c;
+}
+
+@media (max-width: 700px) {
+    .top-menu {
+        min-height: 72px;
+        padding: 8px 10px;
+        flex-wrap: wrap;
+    }
+
+    .menu-links {
+        display: none;
+    }
+
+    .menu-actions {
+        margin-left: auto;
+    }
+
+    .character-tabs {
+        min-height: 40px;
+    }
+
+    .character-tab {
+        flex: 1 1 0;
+        min-width: 0;
+        min-height: 40px;
+        font-size: 0;
+    }
+
+/* ==================================================
+   ÚLTIMO CUADRO NEWS — MISMO OVERFLOW Y SCROLL QUE BITÁCORA
+   ================================================== */
+
+.page > .news-section:last-of-type {
+    height: 425px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #817354 #0c0c09;
+}
+
+.page > .news-section:last-of-type::-webkit-scrollbar {
+    width: 2px;
+}
+
+.page > .news-section:last-of-type::-webkit-scrollbar-track {
+    background: #0c0c09;
+}
+
+.page > .news-section:last-of-type::-webkit-scrollbar-thumb {
+    background: #817354;
+    border-radius: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    background-clip: padding-box;
+}
+
+.page > .news-section:last-of-type::-webkit-scrollbar-thumb:hover {
+    background: #b89b58;
+    background-clip: padding-box;
+}
+
+.page > .news-section:last-of-type .news-content {
+    height: 280px;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #817354 #0c0c09;
+}
+
+.page > .news-section:last-of-type .news-content::-webkit-scrollbar {
+    width: 2px;
+}
+
+.page > .news-section:last-of-type .news-content::-webkit-scrollbar-track {
+    background: #0c0c09;
+}
+
+.page > .news-section:last-of-type .news-content::-webkit-scrollbar-thumb {
+    background: #817354;
+    border-radius: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    background-clip: padding-box;
+}
+
+.page > .news-section:last-of-type .news-content::-webkit-scrollbar-thumb:hover {
+    background: #b89b58;
+    background-clip: padding-box;
+}
+
+@media (max-width: 700px) {
+    .page > .news-section:last-of-type {
+        height: auto;
+        max-height: 458px;
+    }
+}
+}

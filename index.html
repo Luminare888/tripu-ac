@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Assassin's Creed Experience</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         MENÚ SUPERIOR
+         ========================= -->
+    <nav class="top-menu">
+        <a class="menu-logo" href="#" onclick="selectCrew(0); return false;" aria-label="Inicio">
+            <span class="menu-logo-mark"><img src="https://i.imgur.com/Xbw1Ff4.png" alt="Descripción de la imagen" width="80"></span>
+            <span class="menu-logo-text">
+                <img src="https://i.imgur.com/6VD2aEe.png" alt="Descripción de la imagen" width="170">
+            </span>
+        </a>
+
+        <div class="menu-links">
+            <a href="#" class="active" onclick="selectCrew(0); return false;">TRIPULANTES</a>
+        </div>
+
+        <div class="menu-actions">
+            <button class="crew-button" type="button" onclick="changeCrew(-1)">
+                <span class="arrow">‹</span> ANTERIOR TRIPULANTE
+            </button>
+            <button class="crew-button" type="button" onclick="changeCrew(1)">
+                SIGUIENTE TRIPULANTE <span class="arrow">›</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 9 PESTAÑAS INFORMATIVAS. Los nombres se muestran, pero NO son clicables. -->
+    <div class="character-tabs" aria-label="Tripulantes">
+        <div class="character-tab active" data-crew="0">Vittoria</div>
+        <div class="character-tab" data-crew="1">Saya</div>
+        <div class="character-tab" data-crew="2">Anshara</div>
+        <div class="character-tab" data-crew="3">Evie</div>
+        <div class="character-tab" data-crew="4">Rigel</div>
+        <div class="character-tab" data-crew="5">Dorian</div>
+        <div class="character-tab" data-crew="6">Cookie</div>
+        <div class="character-tab" data-crew="7">Hatei</div>
+        <div class="character-tab" data-crew="8">Silas</div>
+        <div class="character-tab" data-crew="8">Tidus</div>
+    </div>
+
+    <div class="page">
+
+    <main class="hero" id="hero-panel">
+
+        <!-- Contenido de la parte izquierda -->
+        <section class="hero-content">
+
+            <div style="display: flex;">
+            <div class="logo">
+                <div class="logo-symbol"></div>
+            </div>
+
+            <div class="background-line" style="margin-top: 40px;"></div>
+        </div>
+
+            <h1 id="character-name">
+                Vittoria de Medici
+            </h1>
+
+            <div class="description">
+
+    <div class="character-data">
+
+        <div class="data-row">
+            <span class="data-label">NOMBRE</span>
+            <span class="data-value">Vittoria de Medici</span>
+        </div>
+
+        <div class="data-row">
+            <span class="data-label">EDAD</span>
+            <span class="data-value">20 años</span>
+        </div>
+
+        <div class="data-row">
+            <span class="data-label">CARGO</span>
+            <span class="data-value">Capitana / Asesina</span>
+        </div>
+
+        <div class="data-row">
+            <span class="data-label">ORIGEN</span>
+            <span class="data-value">Dressrosa</span>
+        </div>
+
+    </div>
+
+</div>
+
+        </section>
+
+        <button class="register">
+                <span id="character-button">DATOS DE VITTORIA</span>
+                <span class="button-arrow">▼</span>
+            </button>
+    </main>
+<!-- ==================================================
+     CONTENIDO DEBAJO DEL HERO
+     ================================================== -->
+
+<section class="below-hero">
+
+    <!-- ==================================================
+         COLUMNA IZQUIERDA
+         ================================================== -->
+
+    <div class="gallery-section">
+
+        <!-- =========================
+             TRASFONDO
+             ========================= -->
+
+        <div class="background-content">
+
+            <div class="background-header">
+                <h2 id="character-section-title">CARACTERISTICAS</h2>
+            </div>
+
+            <div class="background-line"></div>
+
+            <p id="character-description">
+                Nacida en Florencia en el seno de una antigua
+                familia noble, Vittoria de Medici creció rodeada
+                de intrigas políticas y secretos que marcarían
+                su destino.
+
+                Nacida en Florencia en el seno de una antigua
+                familia noble, Vittoria de Medici creció rodeada
+                de intrigas políticas y secretos que marcarían
+                su destino.
+                Nacida en Florencia en el seno de una antigua
+                familia noble, Vittoria de Medici creció rodeada
+                de intrigas políticas y secretos que marcarían
+                su destino.
+                Nacida en Florencia en el seno de una antigua
+                familia noble, Vittoria de Medici creció rodeada
+                de intrigas políticas y secretos que marcarían
+                su destino.
+                Nacida en Florencia en el seno de una antigua
+                familia noble, Vittoria de Medici creció rodeada
+                de intrigas políticas y secretos que marcarían
+                su destino.
+                Nacida en Florencia en el seno de una antigua
+                familia noble, Vittoria de Medici creció rodeada
+                de intrigas políticas y secretos que marcarían
+                su destino.
+                Nacida en Florencia en el seno de una antigua
+                familia noble, Vittoria de Medici creció rodeada
+                de intrigas políticas y secretos que marcarían
+                su destino.
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             GALERÍA DEBAJO
+             ========================= -->
+
+        <div class="gallery" id="character-gallery">
+
+            <div class="gallery-item">
+                <img id="gallery-1" src="https://i.imgur.com/m6n2vYQ.jpeg" alt="Vittoria de Medici">
+            </div>
+
+            <div class="gallery-item">
+                <img id="gallery-2" src="https://i.imgur.com/WRIDxeS.png" alt="Vittoria de Medici">
+            </div>
+
+            <div class="gallery-item">
+                <img id="gallery-3" src="https://i.imgur.com/1f6PdQK.png" alt="Vittoria de Medici">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==================================================
+         COLUMNA DERECHA — NEWS
+         ================================================== -->
+
+    <section class="news-section">
+
+        <div class="news-image">
+
+            <img id="bitacora-image"
+                src="https://i.imgur.com/ksHOkWz.jpeg"
+                alt=""
+            >
+
+            <div class="news-image-overlay"></div>
+
+        </div>
+
+
+        <div class="news-content" id="bitacora-content">
+
+            <div class="news-header">
+
+                <h2 id="bitacora-title">BITACORA</h2>
+
+                <button class="more-button">
+                    EXTRAS
+                </button>
+
+            </div>
+
+            <article class="news-item">
+
+                <div class="news-title">
+
+                    <h3>
+                        Objetivos
+                    </h3>
+
+                    <span>
+                        2026-09-18
+                    </span>
+
+                </div>
+
+                <p>
+                    Pretende construir un mundo sin mentiras, sin secretos y defendiendo el libre albedrío.<br>
+                    Quiere destruir al Gobierno Mundial pero sobre todo a sus adorados "dioses", estableciendo así la libertad.<br>
+                    Esta dispuesta a luchar para arrebatar y proteger armas, artefactos o frutas que puedan utilizar en contra de los inocentes.<br>
+                    Proteger a la población, pero también aportar con sus conocimientos médicos, sobre todo a los que más carecen de recursos.
+                </p>
+
+            </article>
+
+            <article class="news-item">
+
+                <div class="news-title">
+
+                    <h3>
+                        Curiosidades
+                    </h3>
+
+                    <span>
+                        2026-09-18
+                    </span>
+
+                </div>
+
+                <p>
+                    Es muy meticulosa, a veces incluso demasiado.<br>
+                    Odia que en ocasiones le digan "Vitt".<br>
+                    Suele llevar su rostro enmascarado, tratando de cubrir su cicatriz por verguenza.<br>
+                    Blabla...
+                </p>
+
+            </article>
+
+            <article class="news-item">
+
+                <div class="news-title">
+
+                    <h3>
+                        Sombras sobre Florencia
+                    </h3>
+
+                    <span>
+                        1492-04-03
+                    </span>
+
+                </div>
+
+                <p>
+                    Explora las calles, palacios y callejones
+                    donde se desarrolla la historia de Vittoria.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+</section>
+
+
+    <!-- =========================
+         NEWS
+         ========================= -->
+
+    <section class="news-section">
+
+        <!-- Imagen superior -->
+
+        <div class="news-image">
+
+            <img id="trasfondo-image"
+                src="https://i.imgur.com/HxfSJaI.png"
+                alt=""
+            >
+
+            <div class="news-image-overlay"></div>
+
+        </div>
+
+
+        <!-- Contenido NEWS -->
+
+        <div class="news-content" id="trasfondo-content">
+
+            <div class="news-header">
+
+                <h2 id="trasfondo-title">TRASFONDO</h2>
+
+            </div>
+
+
+            <!-- NOTICIA 1 -->
+
+            <article class="news-item">
+
+                <p>
+                    Raffaele de Medici emigró a Dressrosa con la intención de comenzar una nueva vida y trabajar como médico en un centro de salud situado en uno de los barrios más acomodados de la isla. No tardó en demostrar su talento. Su dedicación, sus conocimientos y su trato con los pacientes hicieron que, en poco tiempo, se ganara la reputación de ser uno de los mejores médicos de la zona. Apenas unos años después de su llegada, Raffaele había conseguido reunir una fortuna considerable, suficiente para ofrecerle un hogar confortable a su esposa, Lucrecia, y a su primer hijo, Stefano.<br><br>
+
+Siete años después de establecerse en Dressrosa, nació la segunda hija del matrimonio: Vittoria de Medici. Desde muy pequeña, la joven mostró una personalidad que llenaba de orgullo a sus padres. Era humilde con quienes la rodeaban, siempre dispuesta a ayudar y poseía una enorme curiosidad por las ciencias y, especialmente, por la medicina. Bajo la tutela de su padre, comenzó a adquirir conocimientos médicos desde una edad temprana, demostrando una facilidad poco común para comprender aquello que él le enseñaba. Su hermano mayor, Stefano, era completamente diferente. Intrépido, rebelde y caprichoso, nunca mostró interés por continuar con el trabajo de su padre. Tampoco estaba dispuesto a aceptar los consejos de su madre sobre el matrimonio o las responsabilidades que algún día tendría que asumir. Para Stefano, la única regla que merecía la pena seguir era no obedecer ninguna. Años después nació el tercer y último hijo de la familia, Marco, el pequeño de la casa. Apenas tenía cinco años cuando sus hermanos mayores contaban diecisiete y catorce. Marco era un niño alegre, inocente y de carácter risueño. Para quienes lo conocían, resultaba difícil imaginar que pudiera albergar maldad alguna en su corazón.<br><br>
+
+Con el paso del tiempo, Raffaele decidió que Vittoria estaba preparada para acompañarlo en su trabajo. Tras años de estudio y formación, le ofreció un puesto como médica en su propio centro de salud. La joven comenzó así a seguir los pasos de su padre, ganándose poco a poco el respeto de sus pacientes y compañeros. Sin embargo, el éxito de la familia también despertó la envidia de aquellos que no poseían sus mismos privilegios. Su riqueza, su educación y la reputación de Raffaele habían convertido a los Medici en una familia respetada dentro de la alta sociedad de Dressrosa, pero también en un objetivo. Los Medici habían conseguido numerosos enemigos a lo largo de los años, aunque ninguno de ellos podía imaginar que la mayor amenaza procedería precisamente de una familia perteneciente a su mismo círculo social: los Borgia.<br><br>
+
+Cuando Vittoria cumplió dieciocho años, su vida cambió para siempre. Uno de los hombres que trabajaba para los Borgia consiguió infiltrarse en el entorno de los Medici y presentó ante las autoridades una denuncia falsa contra Raffaele, acusándolo de negligencia médica durante una de sus operaciones. El proceso fue manipulado hasta conseguir que el prestigioso médico fuese declarado culpable y condenado a muerte. Vittoria contempló impotente cómo su padre era ejecutado públicamente por un crimen que jamás había cometido. Aquel acontecimiento destruyó a la familia. Lucrecia, incapaz de soportar la pérdida de su marido, cayó gravemente enferma. Durante sus últimos días permaneció junto a su hija, consciente de que el destino de los Medici estaba a punto de cambiar para siempre. Poco antes de morir, Lucrecia tomó la mano de Vittoria y pronunció sus últimas palabras: «Busca a Carlo Vieri. Él te entregará nuestro verdadero legado...». Después cerró los ojos. Vittoria había perdido a sus dos padres en el mismo año.<br><br>
+
+Sin comprender todavía el significado de las palabras de su madre, acudió en busca de Carlo Vieri, el banquero que durante años había administrado las cuentas y parte de los negocios de la familia. Allí descubrió una verdad todavía más dolorosa. Stefano había traicionado a sus propios padres. Enfurecido porque habían dejado de financiar sus excesos y decidido a apoderarse de la fortuna familiar, Stefano había entregado información sobre ellos a sus enemigos. Su ambición le había llevado incluso a colaborar con aquellos responsables de la caída de su propia familia. Ahora, con Raffaele y Lucrecia muertos, solo quedaban dos obstáculos entre Stefano y la herencia: sus propios hermanos, Marco y Vittoria.<br><br>
+
+Aquella misma noche, Stefano se enfrentó a Vittoria. Ambos desenvainaron sus espadas en el interior de la mansión que alguna vez había sido su hogar. Stefano poseía fuerza y determinación, pero jamás se había preocupado demasiado por entrenar. Vittoria, en cambio, había aprendido a defenderse durante los años que pasó junto a su padre y había desarrollado una habilidad mucho mayor de la que su hermano esperaba. Durante el duelo, Vittoria consiguió atravesarle el hombro con su espada, pero Stefano también logró herirla. La hoja recorrió su rostro y dejó una profunda cicatriz que marcaría a Vittoria para el resto de su vida. La joven comprendió entonces que aquella casa ya no era un hogar, sino una prisión. Aprovechando el caos de la noche, Vittoria tomó a Marco y huyó con él. Ambos abandonaron la mansión y desaparecieron entre las calles del que, hasta entonces, había sido su querido barrio de Dressrosa.<br><br>
+
+Herida, agotada y sin saber en quién confiar, Vittoria llegó finalmente a la residencia de Carlo Vieri. El anciano ya esperaba su llegada, aunque no esperaba verla herida y acompañada por el pequeño Marco. Vittoria le contó todo lo sucedido y Carlo escuchó en silencio. Cuando terminó, el anciano no mostró sorpresa. Él ya conocía la ambición de Stefano. Mientras Vittoria y Marco permanecieran con vida, Stefano no podría reclamar legítimamente toda la herencia de los Medici. Sin embargo, proteger aquello que les pertenecía no sería suficiente. Vittoria tendría que descubrir cuál era el verdadero legado de su familia. Carlo le entregó entonces una carta. En ella aparecía un único destino: Loguetown. Allí debía encontrar a un hombre conocido únicamente por su nombre en clave: Jupiter. Carlo no podía darle más respuestas. El resto tendría que descubrirlo por sí misma.<br><br>
+
+Vittoria emprendió el viaje junto a Marco. Pasaron años recorriendo diferentes mares, enfrentándose a peligros, aprendiendo a sobrevivir y tratando de comprender qué relación existía entre su familia y aquel misterioso legado. Finalmente, después de un largo viaje, llegaron hasta Loguetown. Allí encontraron al hombre encapuchado. Jupiter era un hombre mayor, de mirada severa y rostro marcado por los años. Cuando escuchó el apellido de Vittoria, su expresión cambió. Había conocido a Raffaele y recordaba perfectamente sus facciones. Al contemplar a su hija, comprendió inmediatamente quién era. Sin decir una palabra, Jupiter abrió un antiguo compartimento y sacó una caja de madera. «Tu madre sabía que algún día vendrías», dijo. Vittoria abrió la caja. En su interior había un extraño atuendo de color blanco, acompañado de una capucha, similar a las ropas que llevaba Jupiter. Junto a él había una pequeña nota. Vittoria la desplegó lentamente. No era una carta. Eran unos mandamientos. Un credo. Aquello que durante generaciones había permanecido oculto a los ojos del mundo.<br><br>
+
+En ese momento, Vittoria comprendió que la historia de su familia era mucho más antigua y peligrosa de lo que jamás había imaginado. Los Medici no habían sido simplemente una familia de médicos y hombres de negocios. Habían formado parte de algo mucho mayor: una hermandad que había sobrevivido durante generaciones en las sombras. Una hermandad de asesinos. Desde aquel día, Vittoria abandonó definitivamente la vida que había conocido. Dejando a Marco junto a Jupiter, emprendió la misión de reconstruir una hermandad que prácticamente había desaparecido y que haría que ya no luchase únicamente por su familia. Lucharía por aquellos que no podían defenderse, por los inocentes y por la libertad, para que la verdad jamás volviera a perderse. Porque, mientras existiera alguien dispuesto a luchar por ella, el Credo seguiría vivo.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+</section>
+</div>
+
+
+<script>
+    /*
+     * Cada tripulante tiene su ficha COMPLETA:
+     * datos, descripción, galería, imagen de bitácora, bitácora y trasfondo.
+     * Las pestañas solo muestran nombres; el cambio se hace con Anterior/Siguiente.
+     */
+    const crewMembers = [
+        {
+            name: 'Vittoria de Medici',
+            tab: 'Vittoria de Medici',
+            age: '20 años',
+            role: 'Capitana',
+            birthplace: 'Dressrosa',
+            button: 'DATOS DE VITTORIA',
+            description: 'Es una joven de carácter serio, a quien le cuesta mucho divertirse y cuyas expresiones rara vez resultan especialmente amigables. Aun así, siempre procura suavizar su actitud cuando debe ejercer como médica y cuidar de los demás. Podría decirse que Vittoria posee dos alter egos: el de la médica inocente y compasiva que se desvive por ayudar a quienes lo necesitan, y el de la asesina sin escrúpulos que no teme manchar su espada de sangre si considera que es por un bien mayor. En ambos casos, sus pensamientos están dirigidos hacia el bienestar de quienes menos tienen. A pesar de haber crecido rodeada de riquezas, sus padres se encargaron de enseñarle desde pequeña el valor de la humildad y la importancia de tener consideración por los demás, pues ellos mismos no siempre disfrutaron de una vida acomodada.<br><br>Considera todo un reto para los demás conseguir verla sonreír, aunque, cuando alguien se esfuerza sinceramente por ella, sabe valorar ese gesto desde el corazón. Desde pequeña padece múltiples alergias, motivo por el cual recibió su educación en casa, acompañada de profesores particulares y de su propio padre. Está acostumbrada a la soledad y a pasar largos periodos consigo misma, por lo que, en determinados momentos, necesita aislarse y encerrarse en su propio espacio para recuperar la calma.<br><br>Es delgada, aunque su figura se encuentra marcada por los constantes entrenamientos a los que se somete. Debido a sus alergias, mantiene además una alimentación muy concreta y controlada. A pesar de poseer unas facciones delicadas, heredadas de su madre, Vittoria suele sentirse poco atractiva frente a los demás a causa de la cicatriz que marca su rostro. No presta demasiada atención a su apariencia y tiende a restarle importancia, especialmente cuando se compara con otras personas.<br><br>De su padre heredó su cabello rubio blanquecino y sus ojos grises, ligeramente rasgados, además de unas facciones que hacen que su parecido con él sea especialmente evidente. Su forma de vestir varía bastante dependiendo de la ocasión y de su estado de ánimo: en ocasiones prefiere prendas más formales y elegantes, mientras que otras opta por ropa cómoda y práctica. Sin embargo, hay algo que suele respetar independientemente de su atuendo, la máscara que lleva sobre el rostro, un accesorio al que le concede una importancia especial.',
+            images: {
+                hero: 'https://i.imgur.com/QzncBLr.jpeg',
+                gallery: [
+                    'https://i.imgur.com/m6n2vYQ.jpeg',
+                    'https://i.imgur.com/WRIDxeS.png',
+                    'https://i.imgur.com/1f6PdQK.png'
+                ],
+                bitacora: 'https://i.imgur.com/ksHOkWz.jpeg',
+                trasfondo: 'https://i.imgur.com/HxfSJaI.png'
+            },
+            bitacora: [
+                ['Objetivos', 'Actualidad', 'Pretende construir un mundo sin mentiras, sin secretos y defendiendo el libre albedrío.<br>Quiere proteger a los inocentes y aportar sus conocimientos médicos a quienes más lo necesitan.<br>Esforzarse para progresar como médica, hasta alcanzar el título de cirujana.<br>Recuperar las riquezas de su familia de las manos de su hermano mayor y enemigo, Stefano.<br>Vengar el asesinato de sus padres, acabando con la familia Borgia.<br>Hacer que las próximas generaciones también sigan la doctrina del Credo, que la hermandad nunca se pierda.<br>Morir dejando descendencia, honrando el apellido de los Medici.<br>Llevar de vuelta a su hermano pequeño, Marco, a su hogar.'],
+                ['Curiosidades', 'Actualidad', 'Es muy meticulosa, a veces incluso demasiado.<br>Odia que en ocasiones le digan "Vitt".<br>Suele llevar el rostro enmascarado para cubrir su cicatriz por verguenza.<br>Tiende a ser muy reservada y pocas veces ríe, sacando de quicio a Rigel.<br>Le gusta encerrarse en su estudio a leer libros de medicina e historia, pero siempre con una pequeña vela, adora la luz tenue.<br>Padece múltiples alergias, siempre lleva pañuelos encima y es muy delicada para cosas como comer.<br>En referencia al punto anterior, tiene la necesidad de desinfectar casi todo.<br>Pese a su actitud, es bastante emocional, a escondidas solo piensa en el futuro de su hermano pequeño y sus compañeros.<br>El líder de la hermandad le enseñó a mostrar dignidad por sus víctimas, cerrándoles los ojos una vez sus vidas se apagan.'],
+            ],
+            background: `Raffaele de Medici emigró a Dressrosa con la intención de comenzar una nueva vida y trabajar como médico. Su dedicación, sus conocimientos y su trato con los pacientes hicieron que se ganara la reputación de ser uno de los mejores médicos de la zona.<br><br>
+Siete años después de establecerse en Dressrosa nació Vittoria de Medici. Desde muy pequeña mostró una enorme curiosidad por las ciencias y especialmente por la medicina. Bajo la tutela de su padre comenzó a adquirir conocimientos médicos desde una edad temprana.<br><br>
+Cuando Vittoria cumplió dieciocho años, su vida cambió para siempre. Una denuncia falsa contra Raffaele provocó su condena y ejecución. Lucrecia, incapaz de soportar la pérdida, murió poco después dejando a Vittoria un último encargo: buscar a Carlo Vieri.<br><br>
+Carlo reveló que Stefano había traicionado a la familia. Vittoria huyó junto a Marco y emprendió un largo viaje hasta Loguetown, donde encontró a Jupiter. Allí descubrió el atuendo, el Credo y el verdadero legado de los Medici: una hermandad de asesinos.<br><br>
+Desde aquel día, Vittoria decidió reconstruir aquella hermandad y luchar por los inocentes, la libertad y la verdad.`
+        },
+        {
+            name: 'Fujibayashi Saya',
+            tab: 'Fujibayashi Saya',
+            age: '31 años',
+            role: 'Subcapitana',
+            birthplace: 'Wano',
+            button: 'DATOS DE SAYA',
+            description: '<strong>Físico:</strong> De apariencia austera y contenida, su cabello es corto y de corte irregular, negro azabache, cortado por ella misma como un pequeño acto de ruptura con la imagen que su hermana solía llevar. Su altura y complexión son atléticas, propias de años de entrenamiento. Posee piel algo curtida por el sol y el viaje, facciones serias y marcadas por una fina cicatriz bajo el ojo izquierdo. Sus ojos, de un castaño oscuro casi negro —idénticos a los que tenía Saya—, transmiten una calma calculadora que rara vez deja entrever lo que ocurre debajo. Suele vestir un haori oscuro sobre ropa ajustada, una adaptación práctica y silenciosa de la vestimenta tradicional de su tierra natal.<br><br><strong>Personalidad:</strong> Posee una personalidad contenida, disciplinada y profundamente reservada. Mide cada palabra y cada gesto, consciente de que un solo desliz podría revelar la verdad que oculta desde hace años. No se deja intimidar y actúa con frialdad estratégica incluso bajo presión, priorizando siempre el objetivo por sobre el impulso. A primera vista resulta distante, casi inaccesible, y mantiene un aire misterioso que funciona tanto como escudo emocional como herramienta de sigilo. Es leal hasta el extremo con quienes se gana su confianza, aunque rara vez lo exprese con palabras; sus actos hablan por ella. Debajo de esa fachada calculadora carga un duelo que nunca terminó de procesar, y una culpa silenciosa por haber "reemplazado" a la persona que más amaba.',
+            images: {
+                hero: 'https://i.imgur.com/Q8RS0Gt.jpeg',
+                gallery: [
+                    'https://media.discordapp.net/attachments/851258163419938826/1553803058054561892/ChatGPT_Image_27_sept_2026_01_18_21_p.m..png?ex=6aba935d&is=6ab941dd&hm=87c5b5ab9b5047b2138b8b690b73d38a7deeccc77ef4fb8cf4ccfd86eb9a5864&=&format=webp&quality=lossless&width=600&height=640',
+                    'https://i.imgur.com/v5yfkod.jpeg',
+                    'https://i.imgur.com/xqnCVL7.png'
+                ],
+                bitacora: 'https://i.imgur.com/S0BZXLb.png',
+                trasfondo: 'https://i.gyazo.com/2566ceba1306bc9c4128227b5e8f9908.jpg'
+            },
+            bitacora: [
+                ['Objetivos', 'Actualidad', 'Terminar lo que Saya empezó. Sumire nunca quiso ser la elegida para el Credo; ahora carga sus misiones pendientes como una deuda con la hermana que ya no puede reclamarlas.<br>Encontrar al delator. Alguien dentro del Credo entregó a Saya, y Sumire no descansará hasta descubrir quién fue — sin importar a quién tenga que desenmascarar en el proceso.<br>Desmantelar sistemas de poder que deciden quién vive y quién es sacrificado. Una convicción nacida de haber crecido bajo un régimen que gobernaba con mano de hierro.<br>Descifrar los misterios que el Credo lleva generaciones persiguiendo. Un interés heredado del trabajo de su hermana, que hoy persigue por cuenta propia.<br>Conocer el verdadero origen de su familia y qué los llevó a unirse al Credo. Su padre nunca habló del pasado familiar más allá de lo necesario para entrenarlas; Sumire quiere entender qué historia, pacto o deuda ató a su sangre a Jikogisei generaciones atrás.'],
+                ['Curiosidades', 'Actualidad', 'Nadie en el Jikogisei actual sabe que "Saya" no es su verdadero nombre; ni siquiera quienes la reclutaron.<br>Guarda un pequeño amuleto de su tierra natal oculto bajo la ropa: el único objeto que conserva de su identidad real como Sumire.<br>Su primera espada sigue siendo su arma principal. La espada de su hermana la porta como segunda hoja, un peso extra que eligió cargar y que casi nunca desenvaina junto a la propia — solo ante enemigos que, en su mente, "merecen ver a las dos hermanas" luchar una vez más.<br>Conserva la costumbre de cortarse el cabello ella misma en lugar de dejar que alguien más lo haga.<br>Acostumbra aprender frases sueltas de los distintos idiomas o dialectos de las islas que visita, sin llegar a dominar ninguno del todo.'],
+            ],
+            background: `Las gemelas Sumire y Saya nacieron en una discreta aldea dentro de Wano, un país cerrado al resto del mundo por generaciones, gobernado durante su infancia con un puño de hierro que aplastaba cualquier disidencia y mantenía a buena parte de la población sometida al miedo y la escasez. Crecieron observando ese contraste brutal entre la fachada de orden que el régimen proyectaba hacia afuera y la represión que ejercía puertas adentro — una lección temprana, y silenciosa, sobre lo fácil que resulta para el poder decidir a quién le da voz y a quién se la arrebata.<br><br>
+
+Su padre, un espadachín de renombre y miembro del Credo de Jikogisei que operaba en las sombras incluso dentro de un país tan cerrado y vigilado como Wano, entrenó personalmente a ambas hijas desde muy temprana edad, sin distinción alguna. No fue solo en el arte de la espada: desde niñas les enseñó también los fundamentos de la infiltración y el sigilo, preparándolas por igual para que, algún día, una de las dos pudiera tomar su lugar dentro del Credo. Nunca les habló, sin embargo, de cómo ni por qué su familia había terminado ligada a Jikogisei generaciones atrás — un silencio que ninguna de las dos gemelas cuestionó demasiado en su momento, absorbidas como estaban en el entrenamiento diario. Sumire y Saya crecieron entrenando codo a codo, compartiendo el mismo maestro, el mismo dojo, las mismas heridas de entrenamiento, y el mismo rostro reflejado la una en la otra.<br><br>
+
+Cuando llegó el momento de que su padre transmitiera formalmente su lugar en el Credo, la elección recayó en Saya. Sumire nunca supo con certeza por qué no fue ella — si fue por temperamento, por orden de nacimiento o por una decisión que su padre jamás explicó del todo. A partir de ahí, Saya empezó a desaparecer semanas enteras, absorbida por misiones confidenciales a las que Sumire ya no tenía acceso. El Credo de Jikogisei operaba con un hermetismo absoluto, algo aún más necesario en un país que vigilaba cada movimiento dentro de sus fronteras, y esa distancia — no de habilidad, sino de rol — fue lo que separó sus caminos. Su padre, falleció poco tiempo después, llevándose consigo cualquier respuesta sobre el origen real del vínculo entre su familia con Jikogisei.<br><br>
+
+Cuando Saya fue descubierta y ejecutada durante una misión de infiltración, delatada por alguien cuya identidad Sumire aún desconoce, fue ella quien encontró el cuerpo. No hubo funeral público ni duelo abierto: en su lugar, tomó la decisión de presentarse ante el Credo y ocupar el lugar de su hermana. La sustitución fue posible no solo por el parecido físico idéntico entre ambas, sino también como una consecuencia del entrenamiento que su padre les había dado. Aun así, ocupar activamente ese rol, bajo la presión constante de sostener una identidad ajena y sin la experiencia real de campo que Saya sí había acumulado, terminó de endurecer en ella la faceta silenciosa y calculadora que hoy la define — y fue entonces cuando se cortó el cabello por primera vez, el único gesto físico deliberado que hoy la distingue de la hermana que una vez fue su espejo.<br><br>
+
+Ya activa dentro del Credo de Jikogisei, su nueva posición le dio acceso a información que jamás habría imaginado alcanzar desde afuera: archivos, informes y rumores recopilados durante décadas sobre misterios que el Credo llevaba generaciones tratando de descifrar, fenómenos y verdades ocultas que el propio mundo se esforzaba en enterrar. Ese acceso despertó en ella una curiosidad genuina, casi propia, por comprender qué hay detrás de esos secretos — y, con el tiempo, también por rastrear el propio pasado de su clan dentro de los archivos internos de Jikogisei, con la esperanza de encontrar ahí las respuestas que su padre se llevó consigo.<br><br>
+
+Cuando finalmente encontró la forma de abandonar Wano, algo que muy pocos logran, lo hizo para operar directamente en el mar en nombre del Credo de Jikogisei, asumiendo misiones que la llevaron de isla en isla por el Grand Line — infiltraciones, eliminaciones selectivas y la recopilación de información que sus superiores no confiarían a cualquiera. Cada misión cumplida bajo el nombre de Saya fue, a su manera, una prueba superada y una deuda saldada, aunque el peso de sostener esa identidad nunca terminara de aligerarse.`
+        },
+        {
+            name: 'Anshara',
+            tab: 'Anshara',
+            age: '22 años',
+            role: 'Asesina',
+            birthplace: 'Birka',
+            button: 'DATOS DE ANSHARA',
+            description: '<strong>Físico:</strong> Mide 1,73 m y posee un largo cabello completamente blanco, del mismo tono que sus alas. Sus ojos son verdes y viste principalmente atuendos oscuros, acompañados de detalles metálicos y una capa con interior normalmente rojiza. Porta siempre dos pistolas ligeras.<br><br><strong>Personalidad:</strong> De carácter sarcástico, suele burlarse tanto de sus amigos como sus enemigos. Sigue un código moral estricto de acuerdo al código de su banda, poniendo por encima eso a sus propios sentimientos, por lo que habrá cosas que nunca hará como es matar a civiles. Es de predisposición alegre, aunque mayormente solo con amigos.',
+            images: {
+                hero: 'https://i.imgur.com/Tt0YeCG.jpeg',
+                gallery: [
+                    'https://i.imgur.com/rLLJrUK.jpeg',
+                    'https://media.discordapp.net/attachments/1550227751972245508/1550807340398153748/IMAGEN_3.png?ex=6ab644e2&is=6ab4f362&hm=412cf6c5d97f94b3f5c2ba8f0b6024489cfd0b00bb21d76435e493d4baac0b4d&=&format=webp&quality=lossless&width=640&height=533',
+                    'https://media.discordapp.net/attachments/1550227751972245508/1550807341350391848/IMAGEN_5.png?ex=6ab644e2&is=6ab4f362&hm=df60118ca730eb5167c9e44a6acb53d5a94f3ab3ff49cb4ee52f73b0b1907ff6&=&format=webp&quality=lossless&width=427&height=512'
+                ],
+                bitacora: 'https://i.imgur.com/ZtfkhPW.png',
+                trasfondo: 'https://i.imgur.com/XkJbRtp.png'
+            },
+            bitacora: [
+                ['Objetivos', 'Actualidad', 'Descubrir lo ocurrido en el Siglo Vacío.<br>Convertirse en la mejor tiradora del mundo.<br>Conseguir información sobre todo y todos.<br>Descubrir la verdad sobre la "Fairy Vearth".<br>Cazar a personas que considere peligrosas para proteger a los inocentes.'],
+                ['Curiosidades', 'Actualidad', 'Su nombre y apellido viene de la religión sumeriana, haciendo referencia al dios primordial del cielo.<br>Le encanta usar el Jet Ski, pero ha perdido su par.<br>Toma decisiones incoherentes muchas veces.<br>Documenta todo lo que considera importante o peligroso.'],
+            ],
+            background: `Anshara es una Birkan huérfana criada por Noir, un miembro de la organización que le enseñó todo lo que sabe. Completó su entrenamiento a los 16 años y es experta en el uso de armas de fuego.<br><br>
+
+Fuera de su entrenamiento tuvo varios amigos en Birka, quienes tristemente murieron junto a Noir tras la destrucción de la isla mientras Anshara estaba de misión en Skypiea. Se mantuvo en Skypiea recopilando información hasta que los llamaron hacia Loguetown... aunque ahora no sabe como volver debido a la falta del Knock Up Stream.<br><br>
+
+Espera llevarse bien con sus nuevos compañeros.`
+        },
+        {
+            name: 'Evie',
+            tab: 'Evie',
+            age: '18',
+            role: 'Guerrera',
+            birthplace: 'Prodence',
+            button: 'DATOS DE EVIE',
+            description: '<strong>Físico:</strong> De apariencia llamativa y elegante, su cabello es largo y abundante, de un tono rojizo llameante que llama la atención de cualquiera que ponga los ojos en ella, ya que representa bien su personalidad. Es un poco baja para la media de su edad. Posee piel clara, facciones delicadas pero definidas. Sus ojos son grandes y expresivos, de distinto tono, uno de tonalidad rojiza intenso como su cabello y el otro amarillo-ámbar , transmitiendo una mirada decidida y enérgica.<br><br><strong>Personalidad:</strong> Posee una personalidad firme, decidida y de carácter intensa, Es una joven que suele actuar con determinación, especialmente cuando tiene claro aquello que desea conseguir. No se deja intimidar fácilmente y puede mostrarse bastante segura de sí misma, aunque en situaciones especiales tiende a ser un poco más analítica y no dejarse llevar por sus impulsos para no arruinar los planes. A primera vista puede parecer reservada y difícil de descifrar, pues no acostumbra revelar completamente lo que piensa o siente. Mantiene un aire misterioso que le permite ocultar sus intenciones. Es independiente, orgullosa y perseverante, y cuando toma una decisión le cuesta abandonar su propósito. Sin embargo, detrás de esa seguridad existe un lado más profundo y sensible que solo deja ver a personas en quienes realmente confía.',
+            images: {
+                hero: 'https://i.imgur.com/VPcilSf.jpeg',
+                gallery: [
+                    'https://media.discordapp.net/attachments/1550227751972245508/1550693798407966761/43397230de0cc7e8a0c59a0b6743bfe3.png?ex=6ab5db24&is=6ab489a4&hm=1b638239d29b634ab15b82bae2638d4740f1262f592258ef143b617df2a870cc&=&format=webp&quality=lossless',
+                    'https://media.discordapp.net/attachments/1550227751972245508/1550693800253456516/f34059bbb97804d60fabcdfa38ef4767.png?ex=6ab5db24&is=6ab489a4&hm=ac1da5e322956d7a52c94954d7b470bd2cfbce0ac5a4134cb14f16b34214d8fc&=&format=webp&quality=lossless&width=640&height=615',
+                    'https://media.discordapp.net/attachments/1550227751972245508/1550693799863259136/f6bdeed10154a6767050e5a3fef6fa89.png?ex=6ab5db24&is=6ab489a4&hm=da4d90b26b25fab8ba07ab36e96b43a56d0156ce312881fc74e205a72c538764&=&format=webp&quality=lossless&width=512&height=512'
+                ],
+                bitacora: 'https://i.imgur.com/3E4g1xR.png',
+                trasfondo: 'https://i.imgur.com/mcb4QqP.png'
+            },
+            bitacora: [
+                ['Objetivos', 'Actualidad', 'Proclamar el trono de Prodence como verdadera heredera al mismo.<br>Derrotar a los espadachines que aparezcan en su camino.<br>Dominar un estilo letal y propio de la espada.<br>Aún reclamando el trono de Prodence, será para limpiar su nombre'],
+                ['Curiosidades', 'Actualidad', 'Es hija bastarda; su madre se enamoró de una rama heredera al trono y nació Evie. Quien conocería sus origenes y los intentará usar para beneficio propio.<br>Pese a aspirar a la familia Menmayer, nació en Prodence por el origen de madre.'],
+            ],
+            background: `Evie nació en el Reino de Prodence, fruto de una relación que jamás debió hacerse pública. Su padre pertenecía a una rama secundaria de la familia noble vinculada a la sucesión del trono, mientras que su madre era una mujer ajena a la nobleza. Su nacimiento fue considerado un inconveniente para la familia; reconocerla significaría revelar una relación capaz de generar rumores y cuestionamientos dentro de la corte.<br><br>
+
+Por ello, Evie creció lejos de los círculos más importantes de la nobleza. Oficialmente, era poco más que una hija ilegítima cuya existencia convenía mantener discreta. Sin embargo, desde pequeña supo la verdad. Siempre tuvo el conocimiento de quién era su padre. Sabía de dónde provenía su sangre. Y lo más importante; sabía que aquella sangre tenía valor.<br><br>
+
+Evie gustaba de viajar. Conoció a Vittoria en uno de sus viajes a Dressrosa y la consideró una igual desde primera instancia; alguien con quien podría compartir sus ideales y viajes hasta que finalmente estaría junto a ella en el mismo barco para conocer el mar y sus misterios.<br><br>
+
+Evie sabía a lo que se estaba metiendo; sabía que debería usar su fuerza para ejercer justicia contra aquellos que atentaban contra quienes perdían la voz ante un poder mayor. Así fuese poder político, económico, militar y lo que siguiera.`
+        },
+        {
+            name: 'Subaraki Rigel',
+            tab: 'Subaraki Rigel',
+            age: '30 años',
+            role: 'Arqueologo',
+            birthplace: 'Desconocido',
+            button: 'DATOS DE RIGEL',
+            description: '<strong>Físico:</strong> Rigel es un hombre joven de complexión atlética y robusta, con la piel bronceada, una mandíbula marcada y una expresión habitualmente desenfadada. Su cabello es de tono oscuro, ligeramente desordenado y suele llevarlo cayendo de manera informal sobre su frente. En cuanto a su estilo general, prefiere la indumentaria práctica y acorde a la organización, aunque cuando esta "fuera de servicio" prefiere llevar ropa más comoda.<br><br><strong>Personalidad:</strong> A Rigel le encanta animar a sus compañeros, manteniendo siempre una sonrisa en el rostro incluso si la situación no lo acompaña. Es una persona sumamente sociable y de carácter sarcástico, disfrutando de burlarse tanto de sus amigos como de sus enemigos. A pesar de su actitud despreocupada, es alguien disciplinado y extremadamente fiel al código de Jikogisei, siendo capaz de dejar de lado sus propios sentimientos cuando la situación lo requiere. No suele actuar de manera impulsiva y prefiere observar y analizar antes de intervenir, aunque cuando llega el momento de actuar no duda en hacerlo. Fuera de sus objetivos puede ser bastante perezoso, disfrutando de perder el tiempo y observar las estrellas siempre que tiene la oportunidad.',
+            images: {
+                hero: 'https://i.imgur.com/DEBOSCU.jpeg',
+                gallery: [
+                    'https://i.imgur.com/TVemMuq.jpeg',
+                    'https://i.imgur.com/0jAL288.jpeg',
+                    'https://i.imgur.com/a2SLNzF.jpeg'
+                ],
+                bitacora: 'https://i.imgur.com/wCf15Rp.jpeg',
+                trasfondo: 'https://i.imgur.com/aDymiV4.png'
+            },
+            bitacora: [
+                ['Objetivos', 'Actualidad', 'Conocer todo aquello que se oculta en el mundo, siguiendo el legado de su clan en pos de conocer la verdad sobre el Siglo Vacío.<br>Cumplir con la voluntad del anciano de Jikogisei, convirtiéndose en la última división que descubrirá la verdad y liberará al mundo, haciendo conocida y temida nuevamente a la organización.<br>Colocar la bandera de Jikogisei en cada isla, como un guiño de que siguen vivos, pues mientras ellos sigan vivos, la verdad estará más cerca. Es su forma de demostrar su ira hacia el Gobierno.<br>Cumplir con su tarea pendiente, sin volver a caer en la pereza: descubrir qué esconden las islas del cielo.<br>No volver a perder a nadie más como pasó en su isla natal, es su mayor codicia. Antes que ver caer a un compañero preferiría caer el mismo.'],
+                ['Curiosidades', 'Actualidad', 'Al igual que Altair (personaje de la franquicia Assesins Creed), que es la estrella más brillante de la constelación de Aquila, Rigel es una de las estrellas más brillantes de la constelación de Orión. Esto hace referencia a su intención de convertirse en la guía de todo aquel que lo necesite.<br>Nunca tuvo una buena relación con su padre, pese a que compartía su pasión por el pasado. Consideraba que sus estudios hacían de su madre una persona más desgraciada al permanecer en un segundo plano. Este es el motivo principal por el que porta con orgullo el apellido de su madre, renunciando al de su padre, aunque en la actualidad lo extraña.<br>Pese a estar enfocado en sus objetivos, adora perder el tiempo observando las estrellas, hacia las que siempre ha sentido cierta pasión.<br>Siente algo de envidia por aquellos que pueden tener una familia normal y feliz, pues le hubiese encantado que su padre, al igual que el, no se hubiesen centrado tanto en los estudios, y se hubiesen enfocado un poco más en hacer feliz a su madre, aunque fuesen los pocos años que pudieron ser "una familia normal".<br>Para Rigel, el conocimiento puede llegar a ser una forma de lujuria. No existe secreto que no despierte su deseo por conocerlo, incluso aquellos que deberían permanecer ocultos. Se emociona en exceso con cualquier pista del pasado...<br>Tiene una especie de gula por las experiencias. Le cuesta rechazar una aventura, un lugar desconocido o cualquier oportunidad de descubrir algo nuevo, pues siente que estaría desperdiciando haber sobrevivido a la masacre.<br>Conserva con cariño los apuntes de las investigaciones de su padre, siendo su mayor tesoro y aquello que trata de descifrar día a día.'],
+            ],
+            background: `Rigel pasó sus primeros años junto a su madre, Subaraki Nao, aunque desde muy pequeño mostró interés por las investigaciones de su padre. Cuando apenas tenía tres años, este se vio obligado a separarse de él debido a los peligros que rodeaban sus estudios. Antes de marcharse, confió a Rigel a Ezekiel Veyron, un alto cargo de Jikogisei y ferviente creyente del Credo, bajo el pretexto de que lo convertiría en todo un hombre.<br><br>
+
+Antes de partir, su padre le entregó sus últimas investigaciones y le prometió que, cuando fuese adulto, volvería para preguntarle qué había conseguido descubrir en ellas.<br><br>
+
+Rigel creció dentro de Jikogisei, pasando por distintas divisiones y aprendiendo el camino de la organización. Años después fue enviado a Jaya para investigar los rumores sobre las islas del cielo. Durante el viaje decidió desviarse para regresar al lugar donde había pasado su infancia, encontrándose con una verdad que nadie se había molestado en contarle: aquel lugar había desaparecido hacía más de veinte años.<br><br>
+
+Comprendió entonces que Jikogisei había ocultado deliberadamente su pasado, manteniéndolo alejado de la verdad mediante constantes traslados y falsas misiones. Dolido y enfurecido por el engaño, abandonó su misión y cortó todo contacto con la organización, dedicándose durante años a vagar por el mundo.<br><br>
+
+Finalmente, decidió retomar las investigaciones de su padre. Tras años intentando descifrar el extraño lenguaje en el que estaban escritas, consiguió comprenderlas y descubrió que contenían un propósito mucho mayor, pero lo más importante, es que en la última página se encontraba una sincera disculpa por lo que había pasado, confirmándole que el mismo sabía que iba morir y le iba a dejar solo.<br><br>
+
+Cuando el actual líder de Jikogisei volvió a ponerse en contacto con él, Rigel comprendió que había llegado el momento de regresar y terminar aquello que su padre había comenzado.`
+        },
+        {
+            name: 'Dorian Vance',
+            tab: 'Dorian Vance',
+            age: '22 años',
+            role: 'Asesino',
+            birthplace: '-',
+            button: 'DATOS DE DORIAN',
+            description: '<strong>Físico:</strong> Un hombre con una complexión atlética y fibrosa, curtida por el sol y la batalla. Tiene una barba corta y bien cuidada y una mirada intensa, penetrante y seria que destaca bajo su capucha.<br><br><strong>Personalidad:</strong> A diferencia de la mayoría de piratas caóticos, él mantiene un estricto código personal y una disciplina de Asesino. Es callado, observador y extremadamente analítico. Su expresión intensa y la forma en que empuña su espada muestran a un hombre que ha tomado decisiones difíciles y está dispuesto a llegar hasta el final para cumplir su objetivo, sea cual sea.',
+            images: {
+                hero: 'https://i.imgur.com/RcykcPG.jpeg',
+                gallery: [
+                    'https://i.imgur.com/tHMwvZ2.jpeg',
+                    'https://i.imgur.com/lJ1hNNk.png',
+                    'https://i.imgur.com/HhJu8uT.jpeg'
+                ],
+                bitacora: 'https://i.imgur.com/Lwk5G8o.jpeg',
+                trasfondo: 'https://i.imgur.com/H8YbE3k.jpeg'
+            },
+            bitacora: [
+                ['Objetivos', 'Actualidad', 'Juntarse con otros marginados, piratas con código e informantes para construir una red secreta de inteligencia que opere en todos los mares.<br>Ver al Gobierno Mundial como la orden de tiranía definitiva.<br>Su misión personal es asegurar que la verdad oculta de la historia no caiga en manos de quienes buscan someter al mundo, actuando desde las sombras para mantener el equilibrio.<br>Garantizar que su arma sea reconocida como una leyenda entre los espadachines del mar.'],
+                ['Curiosidades', 'Actualidad', 'Siempre lleva consigo una pequeña tetera de viaje.<br>No importa si está en medio de un tiroteo de cañones o una tormenta en el Grand Line; si es la hora del té, encontrará la forma de colarlo en silencio.<br>Tiene la extraña manía de buscar siempre el punto más alto de cualquier lugar al que llega (mástiles de barcos, tejados, estatuas de la Marine) para observar la situación.<br>Sus compañeros se desesperan porque a veces se pierde minutos buscándolo.<br>Colecciona mapas de navegación antiguos. '],
+            ],
+            background: `Nacido en la brumosa y desolada isla de Kuraigana —el mismo lugar cubierto de ruinas y habitado por los temibles Humandrills—, creció en un entorno donde sobrevivir exigía ser más rápido, silencioso y calculador que cualquier amenaza. Huérfano a temprana edad tras las constantes guerras que devastaron la isla, aprendió a moverse entre las sombras y las ruinas para no ser detectado.<br><br>
+
+Sin un maestro formal, perfeccionó de forma autodidacta el arte del sigilo observando cómo los primates imitadores copiaban las tácticas de los guerreros caídos. Con el tiempo, encontró entre los escombros de un antiguo castillo los restos de un manuscrito olvidado que hablaba de una legendaria orden de sombras: el Credo de los Asesinos. Inspirado por sus códigos de justicia y disciplina, juró adaptar esa filosofía al caótico mundo pirata.`
+        },
+        {
+            name: 'Cookie',
+            tab: 'Cookie',
+            age: '19 años',
+            role: 'Cocinera',
+            birthplace: 'Isla Tumi',
+            button: 'DATOS DE COOKIE',
+            description: '<strong>Físico:</strong> Es una joven de unos 19 años, de aproximadamente 1,65 m de altura y complexión delgada y ágil, con un físico entrenado que refleja más velocidad y precisión que fuerza bruta. Tiene la piel clara, el cabello negro, largo hasta los hombros y ligeramente desordenado, normalmente recogido en un moño bajo mientras algunos mechones caen alrededor de su rostro. Sus ojos son grandes, de color negro muy oscuro, y destacan por una mirada intensa y seria que contrasta con sus facciones delicadas. Tiene el rostro fino, con una nariz pequeña, mandíbula suave y una pequeña cicatriz en la mejilla que apenas destaca. En uno de sus antebrazos lleva un tatuaje de un gato negro sentado, acompañado por pequeños detalles decorativos. Sus manos presentan pequeñas marcas propias de alguien acostumbrada al trabajo de cocina y al entrenamiento con espada. Su postura es normalmente erguida y alerta, y sus movimientos son precisos y controlados, transmitiendo una sensación de agilidad y seguridad. A pesar de su apariencia de joven cocinera de la corte, ciertos detalles de su físico, especialmente su mirada, la cicatriz y el tatuaje, dejan entrever que también está acostumbrada al combate.<br><br><strong>Personalidad:</strong> Tiene una personalidad risueña, que contrasta con su manera de actuar. Sus cicatrices no son físicas sino psicológicas, y esto se nota en su manera errática de afrontar los problemas. Cansada de ver como las injusticias ocurren frente a ella, sueña con poder ver un mundo donde estas no vuelvan a ocurrir, al precio que haga falta. Pese a todo, disfruta de pasar tiempo con sus compañeros y usa la cocina para ganarse la vida.',
+            images: {
+                hero: 'https://i.imgur.com/zfHmKVn.jpeg',
+                gallery: [
+                    'https://i.imgur.com/3Udwzm9.jpeg',
+                    'https://i.imgur.com/iTxEDdm.jpeg',
+                    'https://i.imgur.com/xEdW20B.jpeg'
+                ],
+                bitacora: 'https://i.gyazo.com/10cf20fadb1155f6b23378ac99567593.png',
+                trasfondo: 'https://i.gyazo.com/9007d023ba0aaf6c3a6ddb7a9e98cd3e.jpg'
+            },
+            bitacora: [
+                ['Objetivos', 'Actualidad', 'Aprender a cocinar todas las recetas del mar.<br>Liberar al mundo de la opresión de las altas esferas que oprimen a los más débiles.<br>Crear su propia cadena de restaurantes, donde todo el mundo pueda comer.'],
+                ['Curiosidades', 'Actualidad', 'Sus padres adoptivos la llamaron Cookie porque la encontraron en una caja de galletas, pero curiosamente este era su nombre real.<br>Su comida favorita son las galletas caseras con chocolate.<br>Es zurda, pero usa la derecha para todo porque le castigaban en el trabajo si no lo hacía así.'],
+            ],
+            background: `Cookie llegó a la isla Tumi cuando apenas era un bebé, a bordo de un barco lleno de refugiados. Nadie sabía de dónde procedía ni quiénes eran sus padres. Lo único que encontraron junto a ella fue una pequeña caja llena de galletas, motivo por el que terminarían llamándola Cookie.<br><br>
+
+Una familia humilde de la isla decidió acogerla, aunque su nueva vida estuvo lejos de ser feliz. La familia apenas tenía recursos y, desde muy pequeña, Cookie tuvo que encargarse de todo tipo de tareas domésticas a cambio de un único plato de comida al día. Aprendió a cocinar, limpiar y cuidar de la casa antes incluso de tener la oportunidad de disfrutar de una infancia normal.<br><br>
+
+Cuando cumplió diez años, la familia decidió venderla a una familia noble del reino. Cookie pasó entonces a trabajar como moza en su mansión, realizando las tareas más básicas. Sin embargo, su talento para la cocina no tardó en llamar la atención. Poco a poco fue ganándose la confianza de los demás sirvientes y aprendiendo de los cocineros de la casa, hasta que sus habilidades la llevaron a trabajar en las cocinas de la mansión. A los dieciséis años, gracias a su experiencia y talento, terminó convirtiéndose en la jefa de cocina.<br><br>
+
+Para Cookie, aquello parecía haber sido un ascenso. Sin embargo, pronto descubrió que estar al frente de las cocinas significaba tener acceso a información que habría preferido no conocer. Por la mansión pasaban algunos de los hombres más poderosos del reino y, con ellos, secretos que debían permanecer ocultos. Venta de esclavos, abusos de poder, asesinatos y envenenamientos eran asuntos habituales entre los nobles. Cookie, desde la cocina, escuchaba conversaciones, preparaba banquetes y veía cómo las decisiones tomadas en aquellas habitaciones afectaban a personas que jamás tendrían la oportunidad de defenderse. Ella seguía siendo una sirvienta, pero se había convertido accidentalmente en una de las pocas personas que conocían lo que realmente ocurría entre aquellas paredes.<br><br>
+
+Mientras tanto, el descontento comenzaba a crecer fuera de la mansión. Los ciudadanos del reino, cansados de los abusos de la nobleza, empezaron a organizar protestas y a reclamar un cambio. Las noticias de las revueltas llegaban hasta la cocina y Cookie comenzó a comprender que algo estaba a punto de ocurrir.<br><br>
+
+Los nobles, lejos de intentar escuchar a su pueblo, decidieron responder a las protestas con violencia. Su intención era acabar con cualquiera que se atreviera a rebelarse contra ellos. Cookie sabía que, si la revolución fracasaba, muchas de las personas que protestaban morirían. También sabía que, tarde o temprano, los nobles terminarían descubriendo que ella conocía demasiados de sus secretos.<br><br>
+
+Durante años había obedecido. Había cocinado para ellos, había limpiado sus habitaciones y había permanecido en silencio. Pero aquella noche decidió dejar de hacerlo.<br><br>
+
+La noche anterior al comienzo de la revolución, Cookie preparó el último banquete de la familia noble. Aprovechando la confianza que había conseguido ganarse durante todos aquellos años, envenenó la comida destinada a los miembros de la familia. No hizo distinciones entre adultos, mujeres o niños. Para Cookie, todos formaban parte del mismo sistema que había condenado a innumerables personas a sufrir y que ahora pretendía aplastar la revolución antes de que comenzara.<br><br>
+
+Después de asegurarse de que no quedaba nada que pudiera vincularla con la mansión, tomó todo lo que necesitaba para sobrevivir: armas, dinero y provisiones. Entre las armas encontró uno de los estoques pertenecientes a la familia noble. Hasta aquel momento nunca había empuñado uno, pero decidió llevárselo consigo.<br><br>
+
+Cuando la revolución comenzó, Cookie abandonó definitivamente su posición como sirvienta y se unió a quienes luchaban por liberar el reino. Aquella fue la primera vez que desenvainó el estoque y también la primera vez que luchó por algo que consideraba suyo. Sin embargo, cuando finalmente salió el sol, Cookie ya había desaparecido.<br><br>
+
+No volvió a la mansión ni permaneció en la isla para contemplar las consecuencias de sus actos. Simplemente se marchó de Tumi, dejando atrás su nombre, su pasado y la vida que había llevado durante tantos años.<br><br>
+
+Pero su desaparición no pasó desapercibida.<br><br>
+
+Poco después de abandonar la isla, el líder de Jikogisei consiguió ponerse en contacto con ella. Había oído hablar de lo ocurrido en la mansión y de la misteriosa cocinera que había desaparecido durante la revolución. En lugar de verla únicamente como una asesina o una antigua sirvienta, le ofreció algo que Cookie nunca había tenido: un propósito propio.<br><br>
+
+Jikogisei le ofreció la oportunidad de empezar de nuevo, perseguir sus propios objetivos y formar parte de algo mucho más grande que ella misma. Por primera vez, Cookie tendría la posibilidad de decidir qué hacer con su vida.`
+        },
+        {
+            name: 'Hatei',
+            tab: 'Hatei',
+            age: '33 años',
+            role: 'Tecnólogo',
+            birthplace: 'Isla Gyojin',
+            button: 'DATOS DE HATEI',
+            description: '<strong>Físico:</strong> Hatei es un gyojin tipo pez león de grandes dimensiones y con bastante sobrepeso. Su enorme constitución hace que destaque fácilmente entre los demás. Viste ropa adaptada a su tamaño y complexión, generalmente sencilla y resistente, adecuada para alguien acostumbrado a desenvolverse en situaciones físicas exigentes.<br><br><strong>Personalidad:</strong> Hatei es una persona seria y decidida. A raíz de sus vivencias desde su niñez, siempre se ha comportado como el protector de las personas cercanas a él. Su gran tamaño y su forma de actuar hacen que inspire respeto, incluso cuando no busca imponer su presencia. Es reservado con quienes no conoce, pero una vez establece confianza, resulta difícil que abandone a alguien que considera parte de su círculo.',
+            images: {
+                hero: 'https://i.imgur.com/uYYLxj4.jpeg',
+                gallery: [
+                    'https://media.discordapp.net/attachments/1550227751972245504/1553834533768400917/image.png?ex=6abab0ad&is=6ab95f2d&hm=287ac69ef928e09e531180ba5f1cd5623832c485c4df9cfd1fd31a7927eeab4e&=&format=webp&quality=lossless&width=426&height=640',
+                    'https://i.imgur.com/CEjcJFb.png',
+                    'https://i.imgur.com/ApNqnuH.png'
+                ],
+                bitacora: 'https://i.gyazo.com/0173571182bb4dad332269e741176e06.png',
+                trasfondo: 'https://i.gyazo.com/e734e3c0b307534fbb2542e25f60f8f4.png'
+            },
+            bitacora: [
+                ['Objetivos', 'Actualidad', '-'],
+                ['Curiosidades', 'Actualidad', '-'],
+            ],
+            background: `Hatei nació hace treinta y tres años en la Isla Gyojin, en una sociedad marcada por una larga historia de conflictos entre humanos y gyojins. Su enorme tamaño, propio de un gyojin de tipo pez león, hizo que desde pequeño destacara entre los demás y que las miradas hacia él fueran frecuentes.<br><br>
+Su familia vivía cerca del Distrito Gyojin, una zona habitada en gran parte por personas marginadas, familias con pocos recursos y antiguos esclavos. Allí creció rodeado de historias sobre la discriminación que sufrían los gyojins y los abusos cometidos por algunos humanos. Para muchos habitantes del Distrito, aquellas experiencias habían convertido el rechazo en una parte cotidiana de sus vidas.<br><br>
+Hatei escuchó aquellas historias desde niño, pero nunca terminó de aceptar que el odio pudiera extenderse a todo un pueblo. Aquello no siempre fue bien recibido por quienes lo rodeaban, especialmente por aquellos que consideraban que mantener distancia de los humanos era la única forma de proteger a los suyos.<br><br>
+A los trece años, esa realidad dejó de ser algo que solamente conocía por las historias de los adultos. Un grupo de traficantes humanos llegó hasta la Isla Gyojin para capturar habitantes y venderlos como esclavos. Entre ellos había personas que Hatei conocía. Intentó intervenir, pero su corta edad y falta de experiencia hicieron que fuera incapaz de detenerlos.<br><br>
+Aquella derrota marcó un antes y un después. Durante los años siguientes comenzó a entrenar para aprender a controlar su fuerza y aprovechar su enorme constitución. Poco a poco desarrolló un estilo de combate basado en la potencia y la resistencia, convirtiéndose en alguien difícil de derribar.
+Al mismo tiempo, comenzó a involucrarse cada vez más en los problemas que afectaban al Distrito. No buscaba ocupar ninguna posición de autoridad, pero su tamaño y su fuerza hacían que muchas disputas terminaran requiriendo su intervención.<br><br>
+A los veinticuatro años, un enfrentamiento entre varios grupos provocó una grave revuelta en el Distrito Gyojin. Las calles se convirtieron en un escenario de violencia y numerosos habitantes quedaron atrapados en medio del conflicto.
+Hatei intervino para ayudar a sacar a los civiles de la zona. Durante el enfrentamiento recibió varias heridas y terminó exhausto, pero permaneció allí hasta que la situación quedó bajo control.<br><br>
+Aquella noche comprendió que la violencia del Distrito no iba a desaparecer simplemente derrotando a quienes provocaban los conflictos. Las heridas acumuladas durante generaciones eran mucho más profundas.<br><br>
+Los años posteriores transcurrieron entre distintos trabajos y temporadas en las que Hatei se mantuvo cerca del Distrito. Su tamaño hacía que no pasara desapercibido y su participación en algunos conflictos terminó dándole cierta reputación entre los habitantes de la zona.<br><br>
+Fuera de aquellas situaciones, llevaba una vida bastante sencilla. No era alguien especialmente interesado en llamar la atención y prefería ocuparse de sus propios asuntos. Su círculo cercano era reducido, pero las personas que habían conseguido ganarse su confianza sabían que podían contar con él cuando fuera necesario.<br><br>
+A los treinta y tres años, su vida cambió cuando recibió la visita de dos desconocidos pertenecientes a una organización cuya existencia desconocía.<br><br>
+No llevaban símbolos reconocibles ni parecían responder a ninguna de las fuerzas conocidas de la Isla Gyojin. Sabían quién era Hatei, conocían parte de su pasado y habían seguido sus movimientos durante algún tiempo.<br><br>
+La organización estaba buscando nuevos miembros y consideraba que Hatei podía encajar en sus filas. Sin embargo, apenas ofrecieron información sobre sus verdaderos objetivos. Solamente dejaron claro que su actividad se extendía mucho más allá de la Isla Gyojin.<br><br>
+La propuesta despertó su curiosidad, aunque también sus sospechas. Hatei sabía que aceptar significaba abandonar la vida que había construido y adentrarse en un mundo del que prácticamente no sabía nada.
+Finalmente aceptó.`
+        },
+        {
+            name: 'Silas Vesper',
+            tab: 'Silas Vesper',
+            age: '68 años',
+            role: 'Médico',
+            birthplace: 'Desconocido',
+            button: 'DATOS DE SILAS',
+            description: '<strong>Físico:</strong> Es un anciano de figura delgada y ligeramente encorvada, con el rostro marcado por la edad, el cabello completamente canoso y una larga barba que rara vez se preocupa demasiado por arreglar. Pese a su aspecto descuidado, conserva bastante agilidad y una precisión en las manos que se hace especialmente evidente cuando ejerce como médico. Suele vestir prendas oscuras y abrigos largos con numerosos bolsillos donde guarda instrumental, pequeños frascos, hierbas y toda clase de objetos que considera útiles. Lleva varios anillos y amuletos, nunca se separa de una vieja baraja de tarot y tampoco suele faltarle una petaca. Habitualmente lleva una pipa entre los labios de la que desprende un humo denso y de aroma cambiante; nadie parece saber con certeza qué fuma en ella y Silas nunca ofrece la misma respuesta cuando se lo preguntan. Su apariencia contrasta con ciertos gestos que parecen surgir de manera involuntaria, pues conoce normas de etiqueta poco habituales, sabe desenvolverse con naturalidad entre personas de alta posición y, cuando la situación lo exige, puede abandonar sus modales extravagantes para expresarse con una educación que difícilmente encaja con la imagen que suele ofrecer.<br><br><strong>Personalidad:</strong> Es excéntrico, curioso y difícil de interpretar. Puede mantener una conversación perfectamente seria mientras baraja sus cartas o interrumpir un diagnóstico para preguntar la hora exacta de nacimiento del paciente. Habla con naturalidad de presagios, astrología, destinos y arcanos, aunque nunca queda demasiado claro cuánto cree realmente en todo ello. Lleva tantos años estudiándolo que para él la medicina y el misticismo pueden convivir sin contradicción. Tras esa apariencia extravagante existe un médico meticuloso que observa los síntomas con paciencia, toma notas de casi todo y puede dedicar horas a estudiar aquello que desconoce. Una enfermedad que nunca ha visto despierta en él un entusiasmo que puede resultar incómodo para quien la padece, pues no entiende la medicina únicamente como el arte de curar: considera que comprender cómo sanar un organismo y comprender cómo enfermarlo forman parte del mismo conocimiento. Estudia medicamentos y tratamientos con la misma naturalidad con la que analiza toxinas, patógenos o alteraciones provocadas artificialmente, aunque se toma muy en serio a sus pacientes y detesta perder una vida por ignorancia o por un error que podría haber evitado. Bebe prácticamente todos los días a todas horas habiendo desarrollado suficiente tolerancia como para mantener una aparente normalidad después de cantidades considerables. No considera que tenga un problema y suele irritarse cuando alguien intenta impedírselo. Pese a sus rarezas es bastante sociable, disfruta conversando y tiene la costumbre de leer las cartas a quienes le rodean, aunque su sentido del humor hace difícil saber cuándo habla en serio.',
+            images: {
+                hero: 'https://i.imgur.com/4VPw6oy.jpeg',
+                gallery: [
+                    'https://media.discordapp.net/attachments/1440088185500598397/1553846210278985848/e33ead4f-7c9e-4775-92a3-9a3c4e47b95c.png?ex=6ababb8d&is=6ab96a0d&hm=38d224710fc68644acec3f96f73a70916a4fad77e2d2b8de16985fa83b5d1fdd&=&format=webp&quality=lossless&width=768&height=512',
+                    'https://i.imgur.com/s6pK1D7.jpeg',
+                    'https://i.imgur.com/exDY8au.jpeg'
+                ],
+                bitacora: 'https://i.gyazo.com/f50052af45c5fb7e01affba92d2b5673.png',
+                trasfondo: 'https://i.gyazo.com/32c0a3a0a0208b2cdf5c8e6862ab0036.png'
+            },
+            bitacora: [
+                ['Objetivos', 'Actualidad', 'Conseguir dominar la enfermedad de la misma forma que domina la curación, superando los límites que sus conocimientos actuales todavía le imponen.<br>Reunir conocimientos médicos de todos los lugares que visite, prestando especial atención a enfermedades extrañas, epidemias desaparecidas, toxinas y tratamientos desconocidos.<br>Demostrar que ningún conocimiento debería permanecer prohibido, continuando aquellas investigaciones que otros decidieron abandonar, censurar o destruir.<br>Averiguar si existe realmente alguna relación entre sus tiradas de tarot y los acontecimientos posteriores, algo que lleva décadas registrando y estudiando.<br>Descubrir qué lleva tantos años intentando mostrarle "La Muerte", el arcano que aparece de manera recurrente cuando consulta las cartas acerca del futuro de sus investigaciones.'],
+                ['Curiosidades', 'Actualidad', 'Vesper no es su apellido de nacimiento. Lo escogió él mismo cuando abandonó el lugar donde había crecido. El término hace referencia al anochecer y asegura que le pareció apropiado para alguien que había esperado demasiado para ver caer el sol. Nunca ha revelado públicamente el apellido que utilizaba anteriormente.<br>Antes de tratar por primera vez a un paciente suele pedirle que extraiga una carta de su baraja. Asegura que el resultado no influye en el diagnóstico, aunque siempre lo apunta en el historial.<br>Posee una antigua baraja de tarot cuyas cartas están desgastadas y, en algunos casos, manchadas con sustancias que ni siquiera él recuerda.<br>Tiene la costumbre de bautizar sus investigaciones utilizando los nombres de los arcanos mayores. Cuando abandona definitivamente alguna, tacha su nombre de una libreta y asegura que esa carta ya ha sido jugada.<br>Pese a su apariencia y sus modales habituales, conoce perfectamente las normas de etiqueta de las clases más altas. Nunca explica dónde aprendió a comportarse de ese modo.<br>Posee conocimientos sorprendentemente precisos sobre determinados protocolos y costumbres del Gobierno Mundial, algunos difíciles de justificar únicamente por su antiguo trabajo como médico.<br>Es alcohólico desde hace décadas y siempre lleva una petaca encima, además de esconder alguna botella entre su instrumental. Su adicción es tal que en alguna ocasión ha recurrido al alcohol destinado a desinfectar instrumental cuando se ha quedado sin bebida, aunque asegura saber perfectamente cuáles puede ingerir.<br>Casi siempre fuma en pipa, aunque nadie sabe exactamente qué contiene y dependiendo del día, el humo puede tener un aroma dulce, herbal o resultar tremendamente desagradable. Prepara personalmente sus mezclas y las guarda en pequeños recipientes sin etiquetar junto a sus medicinas.<br>No suele responder cuando alguien le pregunta directamente dónde nació, siendo su respuesta habitual un largo trago de lo que esté bebiendo en aquel momento.<br>La carta de "La Muerte" aparece con una frecuencia anormal cuando consulta el tarot acerca de su investigación principal.'],
+            ],
+            background: `Los primeros años de la vida de Silas Vesper son precisamente aquellos sobre los que menos está dispuesto a hablar, pues ni siquiera Vesper era entonces su apellido. Nació en algún punto de la Red Line y creció completamente apartado de la vida que llevaba la mayoría de las personas, rodeado de una riqueza desproporcionada, profesores privados y personas encargadas de satisfacer prácticamente cualquier necesidad que pudiera tener. Conocía el mundo exterior principalmente a través de libros, mapas y relatos, y recibió desde pequeño una educación cuidadosamente escogida para él. La medicina fue una de las primeras cosas que realmente eligió por sí mismo; comenzó estudiando anatomía y ciencias naturales y terminó desarrollando una especial fascinación por la enfermedad, intrigado por la capacidad de algo invisible para doblegar a una persona independientemente de su fuerza, su riqueza o su posición. Durante aquellos mismos años conoció la astrología, la cartomancia y otras formas de adivinación de la mano de una de las personas encargadas de su educación. Silas nunca encontró contradicción entre ambos mundos y podía pasar la mañana estudiando el funcionamiento de un órgano para dedicar la tarde a interpretar una tirada de tarot con la misma seriedad.<br><br>
+
+Al alcanzar la edad adulta abandonó el lugar donde había crecido, aunque jamás ha explicado las circunstancias que rodearon su marcha. Fue entonces cuando dejó atrás su verdadero apellido y escogió Vesper para la vida que pretendía comenzar. Poco después empezó a colaborar con instituciones vinculadas al Gobierno Mundial, donde su formación le permitió ejercer como médico y posteriormente participar en investigaciones sobre enfermedades, epidemias y sustancias tóxicas. Su incorporación fue extrañamente sencilla y durante sus primeros años algunas puertas parecían abrirse en cuanto determinadas personas averiguaban quién era. Silas nunca se preocupó demasiado por preguntar por qué; lo que realmente le interesaba era disponer de medios con los que investigar. Fue durante aquella etapa cuando comenzó a interesarse especialmente por las enfermedades artificiales. Si una medicina podía alterar el funcionamiento del cuerpo para devolverlo a un estado determinado, quería comprender hasta dónde podía recorrerse el camino contrario, por lo que comenzó a estudiar cómo provocar una enfermedad, modificar sus síntomas o alterar su transmisión.<br><br>
+
+El Gobierno Mundial toleró sus investigaciones mientras resultaron útiles, pero los problemas aparecieron cuando Silas comenzó a decidir por sí mismo qué merecía ser estudiado. Determinados expedientes estaban restringidos, algunas muestras desaparecían y ciertos experimentos necesitaban autorizaciones que nunca llegaban. Había abandonado una vida en la que otros decidían prácticamente todo por él y no estaba dispuesto a encontrarse nuevamente en la misma situación. Terminó accediendo sin permiso a documentación restringida y recuperando investigaciones que habían sido interrumpidas o directamente censuradas, hasta que su permanencia se hizo insostenible. Silas abandonó el Gobierno Mundial sin grandes discursos ni arrepentimientos; sencillamente se negó a continuar trabajando para alguien que pretendía decidir hasta dónde podía llegar su conocimiento. Conservó cuanto pudo de sus propias investigaciones y pasó los años siguientes viajando, ejerciendo como médico allí donde encontraba trabajo y utilizando buena parte de lo que ganaba para continuar estudiando.<br><br>
+
+Aquella vida le permitió conocer enfermedades que jamás había encontrado durante su etapa anterior y tratar a personas de procedencias muy distintas. También fue entonces cuando su relación con el alcohol dejó de ser ocasional: primero bebía durante las largas noches de trabajo, después comenzó a hacerlo para dormir y, con el tiempo, dejó de necesitar una razón. Sus investigaciones fueron concentrándose poco a poco en una idea concreta, la creación de una enfermedad perfecta. Silas no quería fabricar simplemente un veneno capaz de matar rápidamente; pretendía diseñar una enfermedad desde el principio, escoger sus síntomas, determinar su transmisión, controlar su evolución y decidir incluso si debía existir una cura. Quería comprenderla hasta el punto de que cada aspecto de ella pudiera responder a la voluntad de quien la hubiese creado.<br><br>
+
+Su relación con Jikogisei comenzó mucho después y casi por casualidad. Durante uno de sus viajes atendió a un hombre gravemente herido que buscaba un médico dispuesto a trabajar sin hacer demasiadas preguntas. Silas lo mantuvo con vida, cobró por sus servicios y continuó con sus asuntos sin mostrar demasiado interés por la identidad de aquel paciente. Tiempo después el hombre regresó, aunque esta vez no necesitaba tratamiento, y aquel nuevo encuentro terminó acercando a Silas a Jikogisei y posteriormente a Jupiter. Encontró entre ellos algo que llevaba años buscando: la posibilidad de seguir viajando, ejercer como médico y desarrollar sus investigaciones sin volver a tener a alguien vigilando constantemente hacia dónde dirigía su curiosidad. Con el tiempo terminó formando parte de la organización.<br><br>
+
+Silas nunca contó a Jupiter demasiado sobre su vida anterior al Gobierno Mundial y durante un tiempo tampoco tuvo motivos para pensar que este supiera más de lo que él mismo había decidido revelar. La situación cambió durante una conversación privada, cuando Jupiter se refirió a él utilizando el apellido que Silas había abandonado décadas atrás. El médico se limitó a corregirlo y ninguno de los dos volvió a mencionar el asunto. Silas nunca preguntó cómo había descubierto su verdadera identidad ni cuánto sabía realmente sobre su pasado.<br><br>
+
+Ahora ejerce como médico en Jikogisei mientras continúa con la investigación a la que ha dedicado buena parte de su vida. Sus compañeros se han acostumbrado a verlo entre libros, muestras, frascos y cartas de tarot, casi siempre acompañado por una botella y el humo de su pipa. Silas sigue buscando la manera de llevar su conocimiento sobre las enfermedades más allá de los límites que ha encontrado hasta ahora y está convencido de que todavía le falta algo, aunque ni siquiera él sabe exactamente qué busca. Cuando consulta las cartas sobre aquello que todavía le queda por descubrir, hay un arcano que aparece una y otra vez: La Muerte.`
+        },
+        {
+            name: 'Tidus',
+            tab: 'Tidus',
+            age: '22 años',
+            role: 'Asesino',
+            birthplace: 'Isla Gyojin',
+            button: 'DATOS DE TIDUS',
+            description: '<strong>Físico:</strong> De piel azulada como todo gyojin, Tidus posee rasgos característicos de su especie que lo identifican como un tiburón alfombra japonés. Suele vestir ropajes holgados para ocultar su fisonomía atlética, y una bufanda roja que remata en capa adorna su cuello: un obsequio de alguien muy importante para él. Con ojos tan rojos como la sangre y una mirada de cazador, todo su aspecto le otorga una presencia imponente por dondequiera que pasa.<br><br><strong>Personalidad:</strong> Suele regirse por un código de conducta muy marcado, atado a su naturaleza de cazador: piensa antes de hablar y se mantiene siempre expectante ante lo que pueda suceder. No es callado ni mucho menos frío; al contrario, suele referirse a las personas con una empatía que brinda calidez a quien lo escucha, pero jamás deja que la impertinencia —de la que apenas conserva unos rasgos— tome el control. Es estricto cuando la situación lo requiere y sereno en el día a día.',
+            images: {
+                hero: 'https://i.imgur.com/8FVwfgt.jpeg',
+                gallery: [
+                    'https://i.imgur.com/eJin4vG.png',
+                    'https://media.discordapp.net/attachments/1550227751972245508/1552727522758762556/content.png?ex=6ab8a3f1&is=6ab75271&hm=4b01a5b1ad533a60a06a2d3e937e31f1efa93763879fb1d5864a6a3e25ca6089&=&format=webp&quality=lossless&width=768&height=512',
+                    'https://i.imgur.com/NWzSYxP.png'
+                ],
+                bitacora: 'https://i.imgur.com/11MOToG.png',
+                trasfondo: 'https://i.imgur.com/djvPLpB.png'
+            },
+            bitacora: [
+                ['Objetivos', 'Actualidad', 'Evitar que los secretos del mundo caigan en manos equivocadas.<br>Tener contactos en las redes oscuras que conectan el Grand Line.<br>Limpiar a los gyojin del estigma racista que el Gobierno Mundial ha impuesto.<br>Ser una sombra'],
+                ['Curiosidades', 'Actualidad', 'Alguna vez perteneció a una familia aristocrática, aunque se desconoce casi todo al respecto.<br>La bufanda roja que lleva fue un regalo que le hizo una ningyo.<br>Prefiere usar el arco antes que una espada porque le desagrada mancharse de sangre, a pesar de la atracción instintiva que siente hacia ella.<br>Tiburón al fin y al cabo, no tiene problemas en disfrutar de platillos basados en criaturas marinas.<br>Antes de asesinar, hace resonar la cuerda tensada de su arco para advertir a su objetivo y darle la oportunidad de defenderse. Sin embargo, este gesto suele pasar desapercibido, pues la víctima jamás comprende el origen de ese sonido antes de morir.<br>Le encanta el café con chocolate.<br>Su aroma es una combinación entre la brisa marina y la madera húmeda.<br><br>'],
+            ],
+            background: `Un día simplemente apareció en una taberna, dejando en claro que no era un gyojin común y corriente; desde entonces, su presencia no ha hecho más que manifestarse e imponerse. Lo que ocurrió en su vida antes de entregarse por completo al dogma del Credo y a la Orden de Asesinos sigue siendo un misterio. Lo único que se murmura es que en algún momento perteneció a la aristocracia de la propia Isla Gyojin, un origen que el propio Tidus considera irrelevante y que no tiene por qué salir a la luz, aunque la veracidad de esos rumores se refleja en su comportamiento, aun perteneciendo a las sombras.<br><br>
+
+Como era de esperarse, aborrece al Gobierno Mundial por la crueldad con la que discriminan a su especie, considerándolos su enemigo principal. Sin embargo, no se unió a la Orden con el único propósito de erradicarlos, sino para crear conexiones  en lo más bajo del mundo y garantizar que la información prohibida, que ha permanecido oculta por siglos, se mantenga así.`
+        }
+    ];
+
+    let currentCrew = 0;
+
+    function renderBitacora(items) {
+        return items.map(([title, date, text]) => `
+            <article class="news-item">
+                <div class="news-title">
+                    <h3>${title}</h3>
+                    <span>${date}</span>
+                </div>
+                <p>${text}</p>
+            </article>
+        `).join('');
+    }
+
+    function renderTrasfondo(text) {
+        return `
+            <article class="news-item">
+                <p>${text}</p>
+            </article>
+        `;
+    }
+
+    function selectCrew(index) {
+        currentCrew = (index + crewMembers.length) % crewMembers.length;
+        const crew = crewMembers[currentCrew];
+
+        document.querySelector('#character-name').textContent = crew.name;
+
+        const values = document.querySelectorAll('.data-value');
+        values[0].textContent = crew.name;
+        values[1].textContent = crew.age;
+        values[2].textContent = crew.role;
+        values[3].textContent = crew.birthplace;
+
+        document.querySelector('#character-button').textContent = crew.button;
+        document.querySelector('#character-description').innerHTML = crew.description;
+
+        // HERO
+        document.querySelector('#hero-panel').style.backgroundImage = `url("${crew.images.hero}")`;
+
+        // GALERÍA
+        crew.images.gallery.forEach((src, i) => {
+            const img = document.querySelector(`#gallery-${i + 1}`);
+            img.src = src;
+            img.alt = crew.name;
+        });
+
+        // BITÁCORA
+        document.querySelector('#bitacora-image').src = crew.images.bitacora;
+        document.querySelector('#bitacora-image').alt = `Bitácora de ${crew.name}`;
+        document.querySelector('#bitacora-content').innerHTML = `
+            <div class="news-header">
+                <h2>BITACORA</h2>
+                <button class="more-button">EXTRAS</button>
+            </div>
+            ${renderBitacora(crew.bitacora)}
+        `;
+
+        // TRASFONDO
+        document.querySelector('#trasfondo-image').src = crew.images.trasfondo;
+        document.querySelector('#trasfondo-image').alt = `Trasfondo de ${crew.name}`;
+        document.querySelector('#trasfondo-content').innerHTML = `
+            <div class="news-header">
+                <h2>TRASFONDO</h2>
+            </div>
+            ${renderTrasfondo(crew.background)}
+        `;
+
+        // PESTAÑAS: NO son clicables; solo reflejan cuál está activa.
+        document.querySelectorAll('.character-tab').forEach((tab, i) => {
+            tab.classList.toggle('active', i === currentCrew);
+        });
+    }
+
+    function changeCrew(direction) {
+        selectCrew(currentCrew + direction);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => selectCrew(0));
+</script>
+
+</body>
+</html>
